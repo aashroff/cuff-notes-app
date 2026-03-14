@@ -1,0 +1,69 @@
+{
+  "id": "drones",
+  "title": "Drone Laws",
+  "icon": "🛸",
+  "color": "#4DAADB",
+  "version": 1,
+  "subcategories": [
+    "Framework",
+    "Operations",
+    "Offences & Powers"
+  ],
+  "cards": [
+    {
+      "id": "d01",
+      "question": "What is the legal framework for drone operation in the UK?",
+      "answer": "The Air Navigation Order 2016 (as amended), UK Regulation (EU) 2019/947, and the CAA Drone Code. The police also have powers under s.94 Police Act 1997 for surveillance equipment authorisation.",
+      "statute": "ANO 2016 / UK Reg 2019/947",
+      "subcategory": "Framework",
+      "difficulty": 2,
+      "tags": [
+        "framework"
+      ]
+    },
+    {
+      "id": "d02",
+      "question": "What are the key rules for recreational drone flying (Open Category)?",
+      "answer": "Keep below 120m (400ft) altitude. Keep drone in visual line of sight. Never fly near airports or airfields. Stay 150m from residential, commercial, industrial and recreational areas for heavier drones. Register with CAA if drone is 250g+. Operator ID required for all who operate, Flyer ID for 250g+.",
+      "statute": "UK Reg 2019/947",
+      "subcategory": "Operations",
+      "difficulty": 1,
+      "tags": [
+        "rules"
+      ]
+    },
+    {
+      "id": "d03",
+      "question": "What offences relate to dangerous drone use?",
+      "answer": "Art 241 ANO 2016: Endangering safety of any person or property. Art 94A ANO 2016: Flying small unmanned aircraft over/near people/vehicles/structures without permission. s.240A ANO: Flying above 400ft without permission. Also consider Criminal Damage Act 1971, voyeurism offences, and breach of airport restrictions.",
+      "statute": "ANO 2016, Art 241/94A",
+      "subcategory": "Offences & Powers",
+      "difficulty": 3,
+      "tags": [
+        "offences"
+      ]
+    },
+    {
+      "id": "d04",
+      "question": "What police powers exist to deal with illegal drone use?",
+      "answer": "Police can issue a Fixed Penalty Notice for minor offences. For serious offences, arrest under PACE s.24 (necessity criteria). Seize the drone as evidence. Powers under Air Traffic Management and Unmanned Aircraft Act 2021 give police powers to require landing, seize drones, and obtain stored data.",
+      "statute": "ATMUA Act 2021 / PACE 1984",
+      "subcategory": "Offences & Powers",
+      "difficulty": 3,
+      "tags": [
+        "powers"
+      ]
+    },
+    {
+      "id": "d05",
+      "question": "What is a Drone Restriction Zone (DRZ)?",
+      "answer": "Areas around airports and airfields where drone flying is restricted or prohibited. Typically extends to a radius of approx 2.5km for protected aerodromes and 4.6km for the largest airports. Flying in a DRZ without permission is a criminal offence.",
+      "statute": "ANO 2016 / ATMUA Act 2021",
+      "subcategory": "Offences & Powers",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    }
+  ]
+}

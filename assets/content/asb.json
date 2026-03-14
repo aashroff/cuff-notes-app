@@ -1,0 +1,257 @@
+{
+  "id": "asb",
+  "title": "Anti-Social Behaviour",
+  "icon": "📢",
+  "color": "#E07B39",
+  "version": 1,
+  "subcategories": [
+    "ASBCPA 2014 Tools",
+    "Harassment & Stalking",
+    "Domestic Abuse",
+    "Risk Assessment"
+  ],
+  "cards": [
+    {
+      "id": "asb01",
+      "question": "What are the six main tools under the Anti-Social Behaviour Crime and Policing Act 2014?",
+      "answer": "1) Civil Injunction; 2) Criminal Behaviour Order (CBO); 3) Dispersal Power (s34); 4) Community Protection Notice (CPN); 5) Public Spaces Protection Order (PSPO); 6) Closure Power. Together these replaced the ASBO and other earlier remedies.",
+      "statute": "ASBCPA 2014",
+      "subcategory": "ASBCPA 2014 Tools",
+      "difficulty": 1,
+      "tags": [
+        "overview"
+      ]
+    },
+    {
+      "id": "asb02",
+      "question": "What is a Civil Injunction under the ASBCPA 2014?",
+      "answer": "A civil court order prohibiting or requiring conduct to prevent anti-social behaviour. For adults, granted by the county court; for under-18s, by the youth court. The standard of proof is the civil standard (balance of probabilities).",
+      "statute": "ASBCPA 2014, Part 1",
+      "subcategory": "ASBCPA 2014 Tools",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "asb03",
+      "question": "What is a Criminal Behaviour Order (CBO) under the ASBCPA 2014?",
+      "answer": "An order made by a criminal court on conviction for any offence, where the court is satisfied the offender has engaged in behaviour causing harassment, alarm or distress. Can prohibit and require behaviour. Minimum 2 years for adults, 1 year for under-18s.",
+      "statute": "ASBCPA 2014, Part 2",
+      "subcategory": "ASBCPA 2014 Tools",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "asb04",
+      "question": "What is the dispersal power under s34 ASBCPA 2014?",
+      "answer": "A superintendent or above can authorise a dispersal zone for up to 24 hours (extendable to 48). Within the zone, a constable or PCSO in uniform can direct a person contributing to or likely to contribute to ASB to leave the locality and not return for up to 48 hours.",
+      "statute": "ASBCPA 2014, s.34-35",
+      "subcategory": "ASBCPA 2014 Tools",
+      "difficulty": 2,
+      "tags": [
+        "powers"
+      ]
+    },
+    {
+      "id": "asb05",
+      "question": "Who can authorise a dispersal zone under s34 ASBCPA 2014?",
+      "answer": "A superintendent or above must authorise the dispersal zone. The authorisation specifies the locality and the period, up to 24 hours, which can be extended to a maximum of 48 hours.",
+      "statute": "ASBCPA 2014, s.34",
+      "subcategory": "ASBCPA 2014 Tools",
+      "difficulty": 1,
+      "tags": [
+        "powers"
+      ]
+    },
+    {
+      "id": "asb06",
+      "question": "What is a Community Protection Notice (CPN) under the ASBCPA 2014?",
+      "answer": "A written notice issued by a constable, PCSO or local authority authorised person to an individual aged 16 or over, or a business, where their conduct is having a detrimental effect on the quality of life of those in the locality. It requires the conduct to stop and may require positive action.",
+      "statute": "ASBCPA 2014, s.43",
+      "subcategory": "ASBCPA 2014 Tools",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "asb07",
+      "question": "What must be satisfied before a CPN can be issued?",
+      "answer": "The conduct must be unreasonable, must be having a detrimental effect on the quality of life of those in the locality, and the effect must be persistent or continuing. A written warning must generally be given first.",
+      "statute": "ASBCPA 2014, s.43",
+      "subcategory": "ASBCPA 2014 Tools",
+      "difficulty": 2,
+      "tags": [
+        "requirements"
+      ]
+    },
+    {
+      "id": "asb08",
+      "question": "What is a Public Spaces Protection Order (PSPO) under the ASBCPA 2014?",
+      "answer": "An order made by a local authority restricting activities in a public place that are having, or likely to have, a detrimental effect on the quality of life of those in the locality. It can prohibit or require specified things. Duration: up to 3 years, renewable.",
+      "statute": "ASBCPA 2014, Part 4",
+      "subcategory": "ASBCPA 2014 Tools",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "asb09",
+      "question": "What is the closure power under the ASBCPA 2014?",
+      "answer": "A constable or local authority can issue a closure notice for up to 48 hours on premises associated with nuisance or disorder. A court can then make a closure order for up to 3 months, extendable to 6 months. Breach is an offence.",
+      "statute": "ASBCPA 2014, Part 4",
+      "subcategory": "ASBCPA 2014 Tools",
+      "difficulty": 2,
+      "tags": [
+        "powers"
+      ]
+    },
+    {
+      "id": "asb10",
+      "question": "What is the definition of anti-social behaviour for the purposes of a Civil Injunction under the ASBCPA 2014?",
+      "answer": "For injunctions involving housing, it is conduct capable of causing nuisance or annoyance. For all other cases, it is conduct that has caused, or is likely to cause, harassment, alarm or distress to any person not of the same household.",
+      "statute": "ASBCPA 2014, Part 1",
+      "subcategory": "ASBCPA 2014 Tools",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "asb11",
+      "question": "What replaced the ASBO under the ASBCPA 2014?",
+      "answer": "The Civil Injunction replaced the ASBO for civil proceedings. The Criminal Behaviour Order (CBO) replaced the Criminal ASBO (CrASBO) for post-conviction orders. The 2014 Act consolidated and simplified the previous framework.",
+      "statute": "ASBCPA 2014",
+      "subcategory": "ASBCPA 2014 Tools",
+      "difficulty": 1,
+      "tags": [
+        "history"
+      ]
+    },
+    {
+      "id": "asb12",
+      "question": "What is the Protection from Harassment Act 1997 s2 offence?",
+      "answer": "A person must not pursue a course of conduct which amounts to harassment of another and which they know or ought to know amounts to harassment. A course of conduct requires conduct on at least two occasions. Maximum sentence: 6 months. Summary only.",
+      "statute": "PHA 1997, s.2",
+      "subcategory": "Harassment & Stalking",
+      "difficulty": 1,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "asb13",
+      "question": "What is the Protection from Harassment Act 1997 s4 offence?",
+      "answer": "Pursuing a course of conduct which causes another to fear, on at least two occasions, that violence will be used against them, where the defendant knows or ought to know the conduct will cause that fear. Maximum sentence: 10 years. Either way.",
+      "statute": "PHA 1997, s.4",
+      "subcategory": "Harassment & Stalking",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "asb14",
+      "question": "What are the two stalking offences under the Protection from Harassment Act 1997?",
+      "answer": "s2A: Stalking, where a course of conduct amounts to stalking. Maximum: 6 months. s4A: Stalking involving fear of violence or serious alarm or distress. Maximum: 10 years. Stalking conduct includes following, monitoring, interfering with property, watching or spying.",
+      "statute": "PHA 1997, s.2A & s.4A",
+      "subcategory": "Harassment & Stalking",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "asb15",
+      "question": "What is a Stalking Protection Order (SPO)?",
+      "answer": "An order under the Stalking Protection Act 2019 made by a magistrates' court on application by the police. It can prohibit or require behaviour to protect a person from risk associated with stalking by the defendant. Breach is a criminal offence with a maximum of 5 years.",
+      "statute": "SPA 2019",
+      "subcategory": "Harassment & Stalking",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "asb16",
+      "question": "What is coercive control under s76 Serious Crime Act 2015?",
+      "answer": "Repeatedly or continuously engaging in behaviour that is controlling or coercive towards another person, where the parties are personally connected, and the behaviour has a serious effect on the victim. Maximum sentence: 5 years.",
+      "statute": "SCA 2015, s.76",
+      "subcategory": "Domestic Abuse",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "asb17",
+      "question": "What is a Domestic Violence Protection Notice (DVPN)?",
+      "answer": "An emergency notice issued by a superintendent or above to protect a victim of domestic violence or abuse. It prevents the perpetrator from molesting the victim and may exclude them from the home. It lasts 48 hours pending a DVPO hearing.",
+      "statute": "Crime and Security Act 2010",
+      "subcategory": "Domestic Abuse",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "asb18",
+      "question": "What is a Domestic Violence Protection Order (DVPO)?",
+      "answer": "A court order made by the magistrates' court following a DVPN, lasting between 14 and 28 days. It continues the restrictions preventing the perpetrator from contacting or returning to the victim. No conviction is required.",
+      "statute": "Crime and Security Act 2010",
+      "subcategory": "Domestic Abuse",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "asb19",
+      "question": "What is the Domestic Violence Disclosure Scheme (Clare's Law)?",
+      "answer": "A scheme with two elements: the Right to Ask, where any person can ask police if a partner has a history of violence or abuse; and the Right to Know, where police can proactively disclose information about a person's violent history to a potential victim.",
+      "statute": "Home Office Guidance",
+      "subcategory": "Domestic Abuse",
+      "difficulty": 1,
+      "tags": [
+        "scheme"
+      ]
+    },
+    {
+      "id": "asb20",
+      "question": "What is a Non-Molestation Order under the Family Law Act 1996?",
+      "answer": "A civil order prohibiting a person from molesting the applicant or a relevant child. Available to associated persons, including partners, ex-partners and family members. Breach is a criminal offence with a maximum of 5 years.",
+      "statute": "FLA 1996",
+      "subcategory": "Domestic Abuse",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "asb21",
+      "question": "What is the DASH risk assessment?",
+      "answer": "The Domestic Abuse, Stalking and Honour-based Abuse risk identification checklist. Used by police to assess the level of risk posed to a victim of domestic abuse. Risk levels are Standard, Medium, High. High-risk cases are referred to MARAC.",
+      "statute": "SafeLives / DASH",
+      "subcategory": "Risk Assessment",
+      "difficulty": 1,
+      "tags": [
+        "procedure"
+      ]
+    },
+    {
+      "id": "asb22",
+      "question": "What is a MARAC?",
+      "answer": "A Multi-Agency Risk Assessment Conference. A meeting of local agencies including police, health, housing and children's services to share information about high-risk domestic abuse cases and coordinate a safety plan for the victim.",
+      "statute": "SafeLives / MARAC",
+      "subcategory": "Risk Assessment",
+      "difficulty": 1,
+      "tags": [
+        "procedure"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "id": "public_order",
+  "title": "Public Order Act",
+  "icon": "🚨",
+  "color": "#5B8DEF",
+  "version": 1,
+  "subcategories": [
+    "Main Offences",
+    "Key Distinctions",
+    "Defences & Tests",
+    "Processions & Assemblies",
+    "POA 2023"
+  ],
+  "cards": [
+    {
+      "id": "po01",
+      "question": "What is riot under s1 Public Order Act 1986?",
+      "answer": "Where 12 or more persons present together use or threaten unlawful violence for a common purpose, and their conduct would cause a person of reasonable firmness present at the scene to fear for their personal safety. Maximum: 10 years. Indictable only.",
+      "statute": "POA 1986, s.1",
+      "subcategory": "Main Offences",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "po02",
+      "question": "What is violent disorder under s2 Public Order Act 1986?",
+      "answer": "Where 3 or more persons present together use or threaten unlawful violence, and their conduct would cause a person of reasonable firmness present at the scene to fear for their personal safety. Maximum: 5 years. Either way.",
+      "statute": "POA 1986, s.2",
+      "subcategory": "Main Offences",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "po03",
+      "question": "What is affray under s3 Public Order Act 1986?",
+      "answer": "A person uses or threatens unlawful violence towards another, and the conduct would cause a person of reasonable firmness present at the scene to fear for their personal safety. Can be committed by a single person. Maximum: 3 years. Either way.",
+      "statute": "POA 1986, s.3",
+      "subcategory": "Main Offences",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "po04",
+      "question": "What is the offence under s4 Public Order Act 1986?",
+      "answer": "Using threatening, abusive or insulting words or behaviour, or displaying any writing that is threatening, abusive or insulting, intending to cause another to believe that immediate unlawful violence will be used, or to provoke such violence. Maximum: 6 months. Summary.",
+      "statute": "POA 1986, s.4",
+      "subcategory": "Main Offences",
+      "difficulty": 1,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "po05",
+      "question": "What is the offence under s4A Public Order Act 1986?",
+      "answer": "Using threatening, abusive or insulting words or behaviour, or disorderly behaviour, or displaying threatening, abusive or insulting writing, with intent to cause a person harassment, alarm or distress, thereby causing that or another person HAD. Maximum: 6 months. Summary.",
+      "statute": "POA 1986, s.4A",
+      "subcategory": "Main Offences",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "po06",
+      "question": "What is the offence under s5 Public Order Act 1986?",
+      "answer": "Using threatening or abusive words or behaviour, or disorderly behaviour, or displaying any writing that is threatening or abusive, within the hearing or sight of a person likely to be caused harassment, alarm or distress. Maximum: level 3 fine only. Summary.",
+      "statute": "POA 1986, s.5",
+      "subcategory": "Main Offences",
+      "difficulty": 1,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "po07",
+      "question": "What is the minimum number of persons required for each main public order offence under the POA 1986?",
+      "answer": "Riot (s1): 12 or more. Violent Disorder (s2): 3 or more. Affray (s3): 1 (single person sufficient). Fear or provocation of violence (s4): 1. Intentional harassment (s4A): 1. Harassment, alarm or distress (s5): 1.",
+      "statute": "POA 1986",
+      "subcategory": "Main Offences",
+      "difficulty": 1,
+      "tags": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "po08",
+      "question": "What are the maximum sentences for the main POA 1986 offences?",
+      "answer": "Riot (s1): 10 years. Violent Disorder (s2): 5 years. Affray (s3): 3 years. s4 fear or provocation: 6 months. s4A intentional harassment: 6 months. s5 harassment alarm or distress: level 3 fine only.",
+      "statute": "POA 1986",
+      "subcategory": "Main Offences",
+      "difficulty": 1,
+      "tags": [
+        "sentence"
+      ]
+    },
+    {
+      "id": "po09",
+      "question": "What is the key difference between riot and violent disorder?",
+      "answer": "Riot requires 12 or more persons acting for a common purpose; violent disorder requires only 3 or more and has no common purpose requirement. Both require conduct that would cause a person of reasonable firmness to fear for their safety. Riot is 10 years; violent disorder is 5 years.",
+      "statute": "POA 1986, s.1 vs s.2",
+      "subcategory": "Key Distinctions",
+      "difficulty": 2,
+      "tags": [
+        "distinction"
+      ]
+    },
+    {
+      "id": "po10",
+      "question": "What distinguishes affray from violent disorder?",
+      "answer": "Affray can be committed by a single person and requires violence or threats towards another person. Violent disorder requires 3 or more persons. Affray focuses on the threat to an individual; violent disorder focuses on collective conduct threatening public safety.",
+      "statute": "POA 1986, s.2 vs s.3",
+      "subcategory": "Key Distinctions",
+      "difficulty": 2,
+      "tags": [
+        "distinction"
+      ]
+    },
+    {
+      "id": "po11",
+      "question": "Does s3 POA 1986 affray require physical contact with the victim?",
+      "answer": "No. Affray requires use or threat of unlawful violence. However, threats cannot be made by words alone under s3(3) POA 1986. There must be conduct or gestures accompanying any threat. This distinguishes affray from s4 and s4A.",
+      "statute": "POA 1986, s.3(3)",
+      "subcategory": "Key Distinctions",
+      "difficulty": 3,
+      "tags": [
+        "distinction"
+      ]
+    },
+    {
+      "id": "po12",
+      "question": "What is the key distinction between s4 and s4A POA 1986?",
+      "answer": "s4 requires intent to cause another to fear immediate unlawful violence or to provoke immediate violence. s4A requires intent to cause harassment, alarm or distress. s4 focuses on immediacy of violence; s4A focuses on emotional harm. Both carry 6 months max.",
+      "statute": "POA 1986, s.4 vs s.4A",
+      "subcategory": "Key Distinctions",
+      "difficulty": 2,
+      "tags": [
+        "distinction"
+      ]
+    },
+    {
+      "id": "po13",
+      "question": "What is the key distinction between s4A and s5 POA 1986?",
+      "answer": "s4A requires intent to cause harassment, alarm or distress. s5 requires no intent; it is sufficient that the conduct was within hearing or sight of a person likely to be caused those feelings. s5 is a lower threshold but carries only a fine.",
+      "statute": "POA 1986, s.4A vs s.5",
+      "subcategory": "Key Distinctions",
+      "difficulty": 2,
+      "tags": [
+        "distinction"
+      ]
+    },
+    {
+      "id": "po14",
+      "question": "What word was removed from s5 POA 1986 by the Crime and Courts Act 2013?",
+      "answer": "The word 'insulting' was removed. s5 now only covers threatening or abusive words or behaviour. The word 'insulting' remains in s4 and s4A POA 1986.",
+      "statute": "Crime and Courts Act 2013",
+      "subcategory": "Key Distinctions",
+      "difficulty": 2,
+      "tags": [
+        "amendment"
+      ]
+    },
+    {
+      "id": "po15",
+      "question": "What are the statutory defences under s5(3) POA 1986?",
+      "answer": "The defendant had no reason to believe anyone was present who would be caused harassment, alarm or distress; or the defendant was inside a dwelling with no reason to believe the conduct would be heard or seen outside; or the conduct was reasonable.",
+      "statute": "POA 1986, s.5(3)",
+      "subcategory": "Defences & Tests",
+      "difficulty": 2,
+      "tags": [
+        "defence"
+      ]
+    },
+    {
+      "id": "po16",
+      "question": "What is the 'hypothetical bystander' test in POA 1986 offences?",
+      "answer": "For riot, violent disorder and affray, the test is whether the conduct would cause a person of reasonable firmness present at the scene to fear for their personal safety. That person does not need to actually be present; it is an objective test.",
+      "statute": "POA 1986",
+      "subcategory": "Defences & Tests",
+      "difficulty": 2,
+      "tags": [
+        "test"
+      ]
+    },
+    {
+      "id": "po17",
+      "question": "What does 'immediacy' mean in the context of s4 POA 1986?",
+      "answer": "The victim must believe that immediate unlawful violence will be used. Immediate means imminent, not instantaneous. There must be a temporal connection between the threatening conduct and the expected violence.",
+      "statute": "POA 1986, s.4",
+      "subcategory": "Defences & Tests",
+      "difficulty": 3,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "po18",
+      "question": "Under s11 POA 1986, what notice must be given for a public procession?",
+      "answer": "Organisers must give at least 6 clear days written notice to the police before holding a public procession, specifying the date, time, proposed route, and the name and address of an organiser. Exceptions exist for spontaneous processions.",
+      "statute": "POA 1986, s.11",
+      "subcategory": "Processions & Assemblies",
+      "difficulty": 2,
+      "tags": [
+        "procedure"
+      ]
+    },
+    {
+      "id": "po19",
+      "question": "Under s12 POA 1986, what conditions can a senior officer impose on a procession?",
+      "answer": "A senior officer may impose conditions on a procession as to route, duration or numbers if they reasonably believe it may result in serious public disorder, serious damage to property, or serious disruption to the life of the community.",
+      "statute": "POA 1986, s.12",
+      "subcategory": "Processions & Assemblies",
+      "difficulty": 2,
+      "tags": [
+        "powers"
+      ]
+    },
+    {
+      "id": "po20",
+      "question": "Under s14 POA 1986, what power does a senior officer have over public assemblies?",
+      "answer": "A senior officer may impose conditions on a public assembly of 2 or more persons in a public open-air place as to location, duration, and maximum numbers, if they reasonably believe it may result in serious public disorder, serious damage, or serious disruption.",
+      "statute": "POA 1986, s.14",
+      "subcategory": "Processions & Assemblies",
+      "difficulty": 2,
+      "tags": [
+        "powers"
+      ]
+    },
+    {
+      "id": "po21",
+      "question": "What new offences did the Public Order Act 2023 add relevant to protests?",
+      "answer": "Locking on (s1), going equipped to lock on (s2), causing serious disruption by tunnelling (s3-5), obstructing major transport works (s6), and interference with key national infrastructure (s7). Serious Disruption Prevention Orders can restrict individuals.",
+      "statute": "POA 2023",
+      "subcategory": "POA 2023",
+      "difficulty": 2,
+      "tags": [
+        "new offences"
+      ]
+    },
+    {
+      "id": "po22",
+      "question": "What does s17 Public Order Act 2023 protect?",
+      "answer": "It provides that a police officer may not exercise a police power for the sole purpose of preventing a person from observing or reporting on a protest or a protest-related offence. This protects journalists and legal observers at protests.",
+      "statute": "POA 2023, s.17",
+      "subcategory": "POA 2023",
+      "difficulty": 2,
+      "tags": [
+        "protection"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "criminal_damage",
+  "title": "Criminal Damage",
+  "icon": "🔥",
+  "color": "#D4594E",
+  "version": 1,
+  "subcategories": [
+    "Core Offences",
+    "Defences"
+  ],
+  "cards": [
+    {
+      "id": "cd01",
+      "question": "Define Criminal Damage under s.1(1) Criminal Damage Act 1971",
+      "answer": "A person who without lawful excuse destroys or damages any property belonging to another intending to destroy or damage any such property or being reckless as to whether any such property would be destroyed or damaged. Max 10 years (TEW). If value under £5,000, treated as summary only.",
+      "statute": "CDA 1971, s.1(1)",
+      "subcategory": "Core Offences",
+      "difficulty": 1,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "cd02",
+      "question": "Define Arson under s.1(3) Criminal Damage Act 1971",
+      "answer": "An offence of criminal damage (s.1(1) or s.1(2)) committed by destroying or damaging property by fire shall be charged as arson. Maximum penalty: Life imprisonment if endangering life, otherwise 10 years. Always triable either way regardless of value.",
+      "statute": "CDA 1971, s.1(3)",
+      "subcategory": "Core Offences",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "cd03",
+      "question": "What are the 'lawful excuses' under s.5 Criminal Damage Act 1971?",
+      "answer": "A person has lawful excuse if: (a) they believed the person entitled to consent had consented or would have consented, OR (b) they acted to protect property and believed the means of protection were reasonable in the circumstances. Note: this defence does NOT apply to s.1(2) endangering life.",
+      "statute": "CDA 1971, s.5",
+      "subcategory": "Defences",
+      "difficulty": 3,
+      "tags": [
+        "defence"
+      ]
+    }
+  ]
+}

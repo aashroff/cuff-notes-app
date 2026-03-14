@@ -1,0 +1,444 @@
+{
+  "id": "assault",
+  "title": "Assault Offences",
+  "icon": "⚖️",
+  "color": "#E05252",
+  "version": 1,
+  "subcategories": [
+    "Common Law Assault",
+    "ABH - s47 OAPA",
+    "GBH - s20 OAPA",
+    "GBH with Intent - s18 OAPA",
+    "Wounds & Definitions",
+    "Key Distinctions",
+    "Emergency Workers",
+    "Homicide",
+    "Poison Offences"
+  ],
+  "cards": [
+    {
+      "id": "as01",
+      "question": "What is the definition of assault under common law?",
+      "answer": "An act which intentionally or recklessly causes another person to apprehend immediate and unlawful personal violence. No physical contact is required. The victim must apprehend that force is about to be used.",
+      "statute": "Common Law",
+      "subcategory": "Common Law Assault",
+      "difficulty": 1,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "as02",
+      "question": "What is the definition of battery under common law?",
+      "answer": "The intentional or reckless application of unlawful force to another person. Any degree of force is sufficient provided it goes beyond ordinary everyday contact.",
+      "statute": "Common Law",
+      "subcategory": "Common Law Assault",
+      "difficulty": 1,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "as03",
+      "question": "What is the mens rea for common assault?",
+      "answer": "Intention or recklessness as to causing the victim to apprehend immediate unlawful force. Negligence is not sufficient.",
+      "statute": "Common Law",
+      "subcategory": "Common Law Assault",
+      "difficulty": 2,
+      "tags": [
+        "mens rea"
+      ]
+    },
+    {
+      "id": "as04",
+      "question": "What is the mens rea for battery?",
+      "answer": "Intention or recklessness as to the application of unlawful force to another person.",
+      "statute": "Common Law",
+      "subcategory": "Common Law Assault",
+      "difficulty": 2,
+      "tags": [
+        "mens rea"
+      ]
+    },
+    {
+      "id": "as05",
+      "question": "What is the actus reus of assault?",
+      "answer": "An act causing the victim to apprehend immediate unlawful personal violence. Words alone can constitute an assault if they cause the victim to apprehend immediate force.",
+      "statute": "Common Law",
+      "subcategory": "Common Law Assault",
+      "difficulty": 2,
+      "tags": [
+        "actus reus"
+      ]
+    },
+    {
+      "id": "as06",
+      "question": "What is the actus reus of battery?",
+      "answer": "The actual application of unlawful force to another person. The slightest touch can suffice, including force applied indirectly through an object, provided it goes beyond ordinary social contact.",
+      "statute": "Common Law",
+      "subcategory": "Common Law Assault",
+      "difficulty": 2,
+      "tags": [
+        "actus reus"
+      ]
+    },
+    {
+      "id": "as07",
+      "question": "What is the statutory basis and maximum sentence for common assault?",
+      "answer": "s39 Criminal Justice Act 1988 makes common assault and battery summary offences. Maximum sentence: 6 months imprisonment and/or a level 5 fine. Tried in the magistrates court only.",
+      "statute": "CJA 1988, s.39",
+      "subcategory": "Common Law Assault",
+      "difficulty": 1,
+      "tags": [
+        "sentence"
+      ]
+    },
+    {
+      "id": "as08",
+      "question": "What is the definition of ABH under s47 Offences Against the Person Act 1861?",
+      "answer": "Assault occasioning actual bodily harm. An assault or battery which causes actual bodily harm to the victim. ABH is any hurt or injury calculated to interfere with the health or comfort of the victim. More than merely transient or trifling (R v Miller, R v Chan-Fook).",
+      "statute": "OAPA 1861, s.47",
+      "subcategory": "ABH - s47 OAPA",
+      "difficulty": 1,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "as09",
+      "question": "What is the mens rea for s47 ABH?",
+      "answer": "Intention or recklessness as to the assault or battery. There is no requirement to intend or foresee the actual bodily harm. The mens rea is the same as for the underlying assault or battery.",
+      "statute": "OAPA 1861, s.47",
+      "subcategory": "ABH - s47 OAPA",
+      "difficulty": 2,
+      "tags": [
+        "mens rea"
+      ]
+    },
+    {
+      "id": "as10",
+      "question": "What types of injury can constitute ABH under s47 OAPA 1861?",
+      "answer": "Any hurt or injury that interferes with health or comfort, including bruising, scratches, minor cuts, temporary loss of consciousness, and recognised psychiatric illness. Transient or trifling effects such as brief distress or reddening are not sufficient.",
+      "statute": "OAPA 1861, s.47",
+      "subcategory": "ABH - s47 OAPA",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "as11",
+      "question": "What is the maximum sentence for s47 ABH?",
+      "answer": "5 years imprisonment. ABH is an either-way offence triable in the magistrates court or the Crown Court.",
+      "statute": "OAPA 1861, s.47",
+      "subcategory": "ABH - s47 OAPA",
+      "difficulty": 1,
+      "tags": [
+        "sentence"
+      ]
+    },
+    {
+      "id": "as12",
+      "question": "What is the definition of the s20 offence under the Offences Against the Person Act 1861?",
+      "answer": "Unlawfully and maliciously wounding or inflicting grievous bodily harm upon any other person. Malice requires at least recklessness as to the possibility of causing some physical harm to some person.",
+      "statute": "OAPA 1861, s.20",
+      "subcategory": "GBH - s20 OAPA",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "as13",
+      "question": "What is the mens rea for s20 OAPA 1861?",
+      "answer": "Malice, meaning intention or recklessness as to causing some physical harm. The defendant does not need to foresee grievous bodily harm specifically. Recklessness as to any physical harm is sufficient (R v Mowatt).",
+      "statute": "OAPA 1861, s.20",
+      "subcategory": "GBH - s20 OAPA",
+      "difficulty": 2,
+      "tags": [
+        "mens rea"
+      ]
+    },
+    {
+      "id": "as14",
+      "question": "What is the maximum sentence for s20 OAPA 1861?",
+      "answer": "5 years imprisonment. s20 is an either-way offence triable in the magistrates court or the Crown Court.",
+      "statute": "OAPA 1861, s.20",
+      "subcategory": "GBH - s20 OAPA",
+      "difficulty": 1,
+      "tags": [
+        "sentence"
+      ]
+    },
+    {
+      "id": "as15",
+      "question": "Does s20 OAPA 1861 require direct physical contact with the victim?",
+      "answer": "No. The word 'inflict' does not require a direct application of force. GBH can be inflicted by conduct that causes serious harm indirectly, provided it is caused by the defendant's act.",
+      "statute": "OAPA 1861, s.20",
+      "subcategory": "GBH - s20 OAPA",
+      "difficulty": 3,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "as16",
+      "question": "What is the definition of the s18 offence under the Offences Against the Person Act 1861?",
+      "answer": "Unlawfully and maliciously wounding or causing grievous bodily harm to any person with intent to cause GBH, or with intent to resist or prevent the lawful apprehension or detainer of any person.",
+      "statute": "OAPA 1861, s.18",
+      "subcategory": "GBH with Intent - s18 OAPA",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "as17",
+      "question": "What is the mens rea for s18 OAPA 1861?",
+      "answer": "Specific intent to cause grievous bodily harm, or specific intent to resist or prevent lawful apprehension. Recklessness is not sufficient. This is the key distinction from s20.",
+      "statute": "OAPA 1861, s.18",
+      "subcategory": "GBH with Intent - s18 OAPA",
+      "difficulty": 2,
+      "tags": [
+        "mens rea"
+      ]
+    },
+    {
+      "id": "as18",
+      "question": "What is the maximum sentence for s18 OAPA 1861?",
+      "answer": "Life imprisonment. s18 is an indictable only offence tried exclusively in the Crown Court.",
+      "statute": "OAPA 1861, s.18",
+      "subcategory": "GBH with Intent - s18 OAPA",
+      "difficulty": 1,
+      "tags": [
+        "sentence"
+      ]
+    },
+    {
+      "id": "as19",
+      "question": "What is the key distinction between s18 and s20 OAPA 1861?",
+      "answer": "Intent. s18 requires specific intent to cause GBH or to resist lawful apprehension. s20 only requires malice, meaning recklessness as to some physical harm suffices. s18 cannot be committed recklessly. s18 carries life imprisonment; s20 carries 5 years max.",
+      "statute": "OAPA 1861, s.18 vs s.20",
+      "subcategory": "Key Distinctions",
+      "difficulty": 2,
+      "tags": [
+        "distinction"
+      ]
+    },
+    {
+      "id": "as20",
+      "question": "What is the legal definition of a wound under the OAPA 1861?",
+      "answer": "A break of the continuity of the whole skin, meaning both the inner layer (dermis) and outer layer (epidermis) must be broken. Internal bleeding or bruising without a break in the skin does not constitute a wound (JCC v Eisenhower [1984]).",
+      "statute": "JCC v Eisenhower [1984]",
+      "subcategory": "Wounds & Definitions",
+      "difficulty": 2,
+      "tags": [
+        "definition",
+        "case law"
+      ]
+    },
+    {
+      "id": "as21",
+      "question": "What is the legal definition of grievous bodily harm?",
+      "answer": "Really serious bodily harm. This includes serious injuries such as broken bones, permanent disfigurement, injuries requiring surgery, or serious psychiatric harm. The jury or magistrate determines whether harm is serious enough to qualify (DPP v Smith [1961]).",
+      "statute": "DPP v Smith [1961]",
+      "subcategory": "Wounds & Definitions",
+      "difficulty": 2,
+      "tags": [
+        "definition",
+        "case law"
+      ]
+    },
+    {
+      "id": "as22",
+      "question": "What physical requirement must be satisfied for an injury to constitute a wound under OAPA 1861?",
+      "answer": "Both layers of skin must be broken. The dermis and epidermis must both be pierced or cut. A bruise however severe is not a wound. A deep cut or stab that breaks both skin layers is a wound.",
+      "statute": "JCC v Eisenhower [1984]",
+      "subcategory": "Wounds & Definitions",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "as23",
+      "question": "What types of harm can constitute ABH or GBH under the OAPA 1861?",
+      "answer": "Physical injury and recognised psychiatric illness can both constitute ABH or GBH. Mere emotion, fear, distress or panic does not suffice. The psychiatric condition must be a clinically recognised illness such as PTSD, anxiety disorder, or depression.",
+      "statute": "R v Chan-Fook [1994]",
+      "subcategory": "Wounds & Definitions",
+      "difficulty": 3,
+      "tags": [
+        "definition",
+        "case law"
+      ]
+    },
+    {
+      "id": "as24",
+      "question": "What is the key distinction between assault and battery?",
+      "answer": "Assault causes the victim to apprehend immediate unlawful force; no contact is needed. Battery is the actual application of unlawful force; contact is required. An assault can occur without battery, and battery can occur without assault.",
+      "statute": "Common Law",
+      "subcategory": "Key Distinctions",
+      "difficulty": 1,
+      "tags": [
+        "distinction"
+      ]
+    },
+    {
+      "id": "as25",
+      "question": "What is the key distinction between battery and s47 ABH?",
+      "answer": "The result. Battery requires only the application of unlawful force with no requirement of harm. s47 ABH requires that the assault or battery causes actual bodily harm. The mens rea for both is the same: intent or recklessness as to the assault or battery.",
+      "statute": "OAPA 1861, s.47",
+      "subcategory": "Key Distinctions",
+      "difficulty": 2,
+      "tags": [
+        "distinction"
+      ]
+    },
+    {
+      "id": "as26",
+      "question": "What is the key distinction between s47 ABH and s20 GBH?",
+      "answer": "The level of harm and the mens rea. ABH is any hurt interfering with health or comfort. GBH is really serious harm or a wound. s47 mens rea is recklessness as to the assault only; s20 mens rea requires recklessness as to some physical harm.",
+      "statute": "OAPA 1861, s.47 vs s.20",
+      "subcategory": "Key Distinctions",
+      "difficulty": 3,
+      "tags": [
+        "distinction"
+      ]
+    },
+    {
+      "id": "as27",
+      "question": "What are the assault offences in order of seriousness and maximum sentence?",
+      "answer": "1. Common assault or battery: summary only, 6 months. 2. ABH under s47 OAPA: either-way, 5 years. 3. GBH or wounding under s20 OAPA: either-way, 5 years. 4. GBH or wounding with intent under s18 OAPA: indictable only, life imprisonment.",
+      "statute": "CJA 1988 / OAPA 1861",
+      "subcategory": "Key Distinctions",
+      "difficulty": 1,
+      "tags": [
+        "ladder",
+        "sentence"
+      ]
+    },
+    {
+      "id": "as28",
+      "question": "What is the distinction between 'causing' GBH under s18 and 'inflicting' GBH under s20?",
+      "answer": "Causing (s18) is a wider term covering any act that brings about GBH. Inflicting (s20) was historically interpreted more narrowly but is now understood not to require a direct assault. In practice both terms now cover similar conduct.",
+      "statute": "R v Ireland [1998]",
+      "subcategory": "Key Distinctions",
+      "difficulty": 3,
+      "tags": [
+        "distinction",
+        "case law"
+      ]
+    },
+    {
+      "id": "as29",
+      "question": "What is the relevance of consent in assault offences?",
+      "answer": "Consent is a defence to battery in everyday touching, sport within the rules, and medical treatment. Consent is not a defence to ABH or above where the act is done for no good reason. A person cannot consent to their own murder or to serious harm for no legitimate purpose (R v Brown [1994]).",
+      "statute": "R v Brown [1994]",
+      "subcategory": "Key Distinctions",
+      "difficulty": 3,
+      "tags": [
+        "defence",
+        "case law"
+      ]
+    },
+    {
+      "id": "as30",
+      "question": "What is the offence of assaulting an emergency worker?",
+      "answer": "Under the Assaults on Emergency Workers (Offences) Act 2018, it is an offence to commit common assault or battery against an emergency worker acting in the exercise of their functions. Maximum sentence: 2 years imprisonment (increased from 12 months by PCSC Act 2022).",
+      "statute": "AEW(O)A 2018",
+      "subcategory": "Emergency Workers",
+      "difficulty": 1,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "as31",
+      "question": "Who is an emergency worker for the purposes of the Assaults on Emergency Workers (Offences) Act 2018?",
+      "answer": "Police officers, PCSOs, Special Constables, prison officers, custody officers, fire and rescue workers, search and rescue workers, paramedics, doctors and nurses providing emergency services, and coastguard.",
+      "statute": "AEW(O)A 2018",
+      "subcategory": "Emergency Workers",
+      "difficulty": 1,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "as32",
+      "question": "What did the PCSC Act 2022 introduce regarding the unlawful killing of an emergency worker?",
+      "answer": "A mandatory life sentence for manslaughter of an emergency worker acting in the exercise of their functions. This applies to all forms of manslaughter including gross negligence and unlawful act manslaughter.",
+      "statute": "PCSC Act 2022",
+      "subcategory": "Emergency Workers",
+      "difficulty": 2,
+      "tags": [
+        "sentence"
+      ]
+    },
+    {
+      "id": "as33",
+      "question": "What is the legal definition of murder?",
+      "answer": "The unlawful killing of a person under the King's Peace with malice aforethought, meaning with intent to kill or to cause grievous bodily harm. Murder carries a mandatory sentence of life imprisonment.",
+      "statute": "Common Law",
+      "subcategory": "Homicide",
+      "difficulty": 1,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "as34",
+      "question": "What is the definition of manslaughter?",
+      "answer": "The unlawful killing of a person without the malice aforethought required for murder. It includes voluntary manslaughter (where a partial defence such as loss of control or diminished responsibility reduces murder to manslaughter) and involuntary manslaughter (unlawful act or gross negligence).",
+      "statute": "Common Law",
+      "subcategory": "Homicide",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "as35",
+      "question": "What is the key distinction between murder and manslaughter?",
+      "answer": "Malice aforethought. Murder requires intent to kill or cause GBH. Manslaughter does not require this intent. A killing caused recklessly or by a grossly negligent act without intent to cause serious harm is manslaughter, not murder.",
+      "statute": "Common Law",
+      "subcategory": "Homicide",
+      "difficulty": 2,
+      "tags": [
+        "distinction"
+      ]
+    },
+    {
+      "id": "as36",
+      "question": "What is the offence under s23 OAPA 1861?",
+      "answer": "Unlawfully and maliciously administering to or causing to be taken by any other person any poison or noxious thing, so as to endanger their life or inflict GBH. Maximum sentence: 10 years.",
+      "statute": "OAPA 1861, s.23",
+      "subcategory": "Poison Offences",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "as37",
+      "question": "What is the offence under s24 OAPA 1861?",
+      "answer": "Unlawfully and maliciously administering to or causing to be taken by any other person any poison or noxious thing with intent to injure, aggrieve or annoy. Maximum sentence: 5 years. Does not require that life is endangered or GBH caused.",
+      "statute": "OAPA 1861, s.24",
+      "subcategory": "Poison Offences",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "as38",
+      "question": "What is the key distinction between s23 and s24 OAPA 1861?",
+      "answer": "The consequence and intent required. s23 requires that the noxious substance actually endangers life or causes GBH. s24 only requires intent to injure, aggrieve or annoy, with no requirement that serious harm results. s23 carries 10 years; s24 carries 5 years.",
+      "statute": "OAPA 1861, s.23 vs s.24",
+      "subcategory": "Poison Offences",
+      "difficulty": 3,
+      "tags": [
+        "distinction"
+      ]
+    }
+  ]
+}

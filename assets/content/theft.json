@@ -1,0 +1,281 @@
+{
+  "id": "theft",
+  "title": "Theft Act 1968",
+  "icon": "🔓",
+  "color": "#D4A853",
+  "version": 1,
+  "subcategories": [
+    "Core Offences",
+    "Burglary & Robbery",
+    "Other Theft Offences",
+    "Key Distinctions"
+  ],
+  "cards": [
+    {
+      "id": "t01",
+      "question": "What is the definition of theft under s1 Theft Act 1968?",
+      "answer": "A person is guilty of theft if they dishonestly appropriate property belonging to another with the intention of permanently depriving the other of it.",
+      "statute": "Theft Act 1968, s.1(1)",
+      "subcategory": "Core Offences",
+      "difficulty": 1,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "t02",
+      "question": "What are the five elements of theft (DAPIP)?",
+      "answer": "D - Dishonesty; A - Appropriation; P - Property; I - belonging to another person (Identification); P - Permanent deprivation (intention). All five must be proved.",
+      "statute": "Theft Act 1968, s.1",
+      "subcategory": "Core Offences",
+      "difficulty": 1,
+      "tags": [
+        "elements",
+        "mnemonic"
+      ]
+    },
+    {
+      "id": "t03",
+      "question": "What does 'appropriation' mean under s3 Theft Act 1968?",
+      "answer": "Any assumption of the rights of an owner. This includes keeping property already possessed lawfully if the original acquisition was innocent. Even an act authorised by the owner can be an appropriation (R v Gomez, R v Hinks).",
+      "statute": "Theft Act 1968, s.3",
+      "subcategory": "Core Offences",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "t04",
+      "question": "What does s2 Theft Act 1968 say about dishonesty?",
+      "answer": "A person is NOT dishonest if they believe they have a legal right to the property, believe the owner would consent, or believe the owner cannot be found by taking reasonable steps. If none of these apply, the Ivey v Genting Casinos test is used.",
+      "statute": "Theft Act 1968, s.2",
+      "subcategory": "Core Offences",
+      "difficulty": 2,
+      "tags": [
+        "definition",
+        "defence"
+      ]
+    },
+    {
+      "id": "t05",
+      "question": "What is the current legal test for dishonesty in theft offences?",
+      "answer": "Two stages (Ivey v Genting Casinos [2017]): 1) What was the defendant's actual state of knowledge or belief as to the facts? 2) Was the conduct dishonest by the standards of ordinary decent people? The defendant's own view of whether their conduct was dishonest is irrelevant.",
+      "statute": "Ivey v Genting Casinos [2017]",
+      "subcategory": "Core Offences",
+      "difficulty": 3,
+      "tags": [
+        "case law"
+      ]
+    },
+    {
+      "id": "t06",
+      "question": "What does s6 Theft Act 1968 say about intention to permanently deprive?",
+      "answer": "A person is treated as intending to permanently deprive if they treat the thing as their own to dispose of regardless of the other's rights. This includes borrowing in circumstances equivalent to an outright taking, such as borrowing for so long that it loses all practical value.",
+      "statute": "Theft Act 1968, s.6",
+      "subcategory": "Core Offences",
+      "difficulty": 3,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "t07",
+      "question": "What is the definition of property under s4 Theft Act 1968?",
+      "answer": "Money and all other property, real or personal, including things in action and other intangible property. Land is generally excluded except in specific circumstances, such as where a trustee deals with land improperly.",
+      "statute": "Theft Act 1968, s.4",
+      "subcategory": "Core Offences",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "t08",
+      "question": "What does 'belonging to another' mean under s5 Theft Act 1968?",
+      "answer": "Property belongs to any person who has possession or control of it, or any proprietary right or interest in it. A person can steal their own property if another person has possession or control of it. Property received under an obligation to deal with it in a particular way is treated as belonging to the other.",
+      "statute": "Theft Act 1968, s.5",
+      "subcategory": "Core Offences",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "t09",
+      "question": "What property cannot be stolen under the Theft Act 1968?",
+      "answer": "Land (with limited exceptions), wild plants (unless uprooted commercially), wild animals not in captivity, and things in action that are not transferable. Intangible property such as confidential information or a trade secret cannot be stolen.",
+      "statute": "Theft Act 1968, s.4",
+      "subcategory": "Core Offences",
+      "difficulty": 3,
+      "tags": [
+        "exceptions"
+      ]
+    },
+    {
+      "id": "t10",
+      "question": "What is the maximum sentence for theft?",
+      "answer": "7 years' imprisonment. Theft is triable either way.",
+      "statute": "Theft Act 1968, s.7",
+      "subcategory": "Core Offences",
+      "difficulty": 1,
+      "tags": [
+        "sentence"
+      ]
+    },
+    {
+      "id": "t11",
+      "question": "What is the definition of robbery under s8 Theft Act 1968?",
+      "answer": "A person commits robbery if they steal and, immediately before or at the time of stealing, use force on any person, or put any person in fear of being then and there subjected to force. The theft must be complete.",
+      "statute": "Theft Act 1968, s.8(1)",
+      "subcategory": "Burglary & Robbery",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "t12",
+      "question": "What is the maximum sentence for robbery?",
+      "answer": "Life imprisonment. Robbery is an indictable only offence tried in the Crown Court.",
+      "statute": "Theft Act 1968, s.8(2)",
+      "subcategory": "Burglary & Robbery",
+      "difficulty": 1,
+      "tags": [
+        "sentence"
+      ]
+    },
+    {
+      "id": "t13",
+      "question": "What are the two types of burglary under s9 Theft Act 1968?",
+      "answer": "s9(1)(a): Entering a building or part of a building as a trespasser with intent to steal, cause GBH, or do unlawful damage. s9(1)(b): Having entered as a trespasser, actually stealing or attempting to steal, or inflicting or attempting to inflict GBH.",
+      "statute": "Theft Act 1968, s.9",
+      "subcategory": "Burglary & Robbery",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "t14",
+      "question": "What is the maximum sentence for burglary?",
+      "answer": "For a dwelling: 14 years. For a non-dwelling: 10 years. Burglary of a dwelling is an either-way offence but commonly tried at Crown Court.",
+      "statute": "Theft Act 1968, s.9",
+      "subcategory": "Burglary & Robbery",
+      "difficulty": 1,
+      "tags": [
+        "sentence"
+      ]
+    },
+    {
+      "id": "t15",
+      "question": "What is aggravated burglary under s10 Theft Act 1968?",
+      "answer": "Committing burglary while having with them a firearm, imitation firearm, weapon of offence, or explosive at the time of the burglary. Maximum sentence: life imprisonment. The weapon must be present at the time of the burglary, not merely possessed generally.",
+      "statute": "Theft Act 1968, s.10",
+      "subcategory": "Burglary & Robbery",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "t16",
+      "question": "What is handling stolen goods under s22 Theft Act 1968?",
+      "answer": "Dishonestly receiving stolen goods, or undertaking or assisting in their retention, removal, disposal or realisation for the benefit of another, knowing or believing them to be stolen. Maximum sentence: 14 years.",
+      "statute": "Theft Act 1968, s.22",
+      "subcategory": "Other Theft Offences",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "t17",
+      "question": "What is the offence of taking a conveyance without consent under s12 Theft Act 1968?",
+      "answer": "Taking a conveyance for one's own or another's use without the consent of the owner or other lawful authority, knowing there is no such authority. Does not require intent to permanently deprive. Maximum sentence: 6 months. Summary only.",
+      "statute": "Theft Act 1968, s.12",
+      "subcategory": "Other Theft Offences",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "t18",
+      "question": "What is aggravated vehicle taking under s12A Theft Act 1968?",
+      "answer": "Taking a vehicle without consent where the vehicle was driven dangerously, an accident occurred causing injury or damage, or damage was caused to the vehicle. Maximum sentence: 2 years, or 14 years if death results.",
+      "statute": "Theft Act 1968, s.12A",
+      "subcategory": "Other Theft Offences",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "t19",
+      "question": "What is going equipped under s25 Theft Act 1968?",
+      "answer": "When not at home, having any article for use in connection with any burglary or theft. The offence is committed by having the article, regardless of whether a theft or burglary takes place. Maximum sentence: 3 years.",
+      "statute": "Theft Act 1968, s.25",
+      "subcategory": "Other Theft Offences",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "t20",
+      "question": "What is the offence of making off without payment under s3 Theft Act 1978?",
+      "answer": "Knowing that payment on the spot is required or expected for goods supplied or a service done, dishonestly making off without having paid as required or expected, and with intent to avoid payment. Maximum sentence: 2 years.",
+      "statute": "Theft Act 1978, s.3",
+      "subcategory": "Other Theft Offences",
+      "difficulty": 1,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "t21",
+      "question": "What is obtaining services dishonestly under s11 Fraud Act 2006?",
+      "answer": "Dishonestly obtaining services from another by a false act, where the services are made available on the basis that payment has been or will be made. This replaced the old s1 Theft Act 1978 obtaining services by deception. Maximum sentence: 5 years.",
+      "statute": "Fraud Act 2006, s.11",
+      "subcategory": "Other Theft Offences",
+      "difficulty": 2,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "t22",
+      "question": "What is the key distinction between theft and TWOC under s12 Theft Act 1968?",
+      "answer": "Theft requires intention to permanently deprive. TWOC only requires taking without consent, with no need to prove the person intended to keep the vehicle. A person who borrows a car without permission but plans to return it commits TWOC, not theft.",
+      "statute": "Theft Act 1968, s.12",
+      "subcategory": "Key Distinctions",
+      "difficulty": 2,
+      "tags": [
+        "distinction"
+      ]
+    },
+    {
+      "id": "t23",
+      "question": "What is the key distinction between robbery and theft?",
+      "answer": "Robbery requires the additional element of force or the threat of force used immediately before or at the time of stealing. Without this element, the offence remains theft. The force or threat must be in order to steal.",
+      "statute": "Theft Act 1968, s.8",
+      "subcategory": "Key Distinctions",
+      "difficulty": 2,
+      "tags": [
+        "distinction"
+      ]
+    },
+    {
+      "id": "t24",
+      "question": "What is the key distinction between s9(1)(a) and s9(1)(b) burglary?",
+      "answer": "s9(1)(a) is an entry offence: intent to steal, cause GBH or do unlawful damage must exist at the point of entry. s9(1)(b) is a post-entry offence: the intent may be formed after entry. Different facts and evidence are required for each.",
+      "statute": "Theft Act 1968, s.9",
+      "subcategory": "Key Distinctions",
+      "difficulty": 3,
+      "tags": [
+        "distinction"
+      ]
+    }
+  ]
+}

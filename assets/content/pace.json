@@ -1,0 +1,104 @@
+{
+  "id": "pace",
+  "title": "PACE & Arrest",
+  "icon": "🚔",
+  "color": "#7C5CBF",
+  "version": 1,
+  "subcategories": [
+    "Arrest",
+    "Stop & Search",
+    "Detention",
+    "Entry & Search"
+  ],
+  "cards": [
+    {
+      "id": "p01",
+      "question": "What are the conditions for a lawful arrest under PACE s.24?",
+      "answer": "A constable may arrest without warrant anyone (a) about to commit an offence, (b) in the act of committing an offence, (c) whom they have reasonable grounds to suspect is about to commit an offence, (d) whom they reasonably suspect is committing an offence. For past offences: anyone guilty or reasonably suspected of being guilty.",
+      "statute": "PACE 1984, s.24(1)-(3)",
+      "subcategory": "Arrest",
+      "difficulty": 1,
+      "tags": [
+        "powers"
+      ]
+    },
+    {
+      "id": "p02",
+      "question": "What are the Necessity Criteria under PACE s.24(5) Code G?",
+      "answer": "Arrest is only necessary if the constable has reasonable grounds to believe it is necessary to: ascertain name/address, prevent physical injury/damage/offence against public decency/obstruction of highway, protect a child or vulnerable person, allow prompt and effective investigation, prevent disappearance.",
+      "statute": "PACE 1984, s.24(5) / Code G",
+      "subcategory": "Arrest",
+      "difficulty": 2,
+      "tags": [
+        "necessity"
+      ]
+    },
+    {
+      "id": "p03",
+      "question": "What must be communicated during an arrest?",
+      "answer": "The person must be told: (1) that they are under arrest, (2) the reason/offence for the arrest, (3) the caution: 'You do not have to say anything. But it may harm your defence if you do not mention when questioned something which you later rely on in court. Anything you do say may be given in evidence.'",
+      "statute": "PACE 1984, s.28 / Code G",
+      "subcategory": "Arrest",
+      "difficulty": 1,
+      "tags": [
+        "procedure",
+        "caution"
+      ]
+    },
+    {
+      "id": "p04",
+      "question": "What are the police powers of Stop and Search under PACE s.1?",
+      "answer": "A constable may search any person or vehicle in a public place for stolen or prohibited articles if they have reasonable grounds to suspect they will find such articles. Must give GOWISELY information before searching.",
+      "statute": "PACE 1984, s.1",
+      "subcategory": "Stop & Search",
+      "difficulty": 1,
+      "tags": [
+        "powers"
+      ]
+    },
+    {
+      "id": "p05",
+      "question": "What does GOWISELY stand for?",
+      "answer": "G - Grounds for the search. O - Object of the search. W - Warrant card (if plain clothes). I - Identification (officer's name). S - Station (officer's police station). E - Entitled to a copy of the search record. L - Legal power used. Y - YOU are detained for the purpose of a search.",
+      "statute": "PACE 1984, Code A",
+      "subcategory": "Stop & Search",
+      "difficulty": 1,
+      "tags": [
+        "mnemonic"
+      ]
+    },
+    {
+      "id": "p06",
+      "question": "What are the Time Limits for detention under PACE?",
+      "answer": "Initial detention: up to 24 hours from arrival at station. Superintendent can extend to 36 hours for indictable offences. Magistrates' Court can extend to a total of 96 hours maximum. Reviews: first at 6 hours by Inspector, then every 9 hours.",
+      "statute": "PACE 1984, s.41-44",
+      "subcategory": "Detention",
+      "difficulty": 2,
+      "tags": [
+        "time limits"
+      ]
+    },
+    {
+      "id": "p07",
+      "question": "What powers of entry does PACE s.17 provide?",
+      "answer": "A constable may enter and search premises without warrant to: (a) execute an arrest warrant, (b) arrest for an indictable offence, (c) arrest for specified offences (s.4 POA, s.163 RTA etc.), (d) recapture a person unlawfully at large, (e) save life or limb or prevent serious damage to property.",
+      "statute": "PACE 1984, s.17",
+      "subcategory": "Entry & Search",
+      "difficulty": 2,
+      "tags": [
+        "powers"
+      ]
+    },
+    {
+      "id": "p08",
+      "question": "What is the power to search after arrest under PACE s.32?",
+      "answer": "A constable may search an arrested person at the place of arrest if they have reasonable grounds to believe the person may present a danger, has anything that could be used to escape, or has evidence relating to any offence. May also enter and search premises where the person was at the time of, or immediately before, arrest.",
+      "statute": "PACE 1984, s.32",
+      "subcategory": "Entry & Search",
+      "difficulty": 2,
+      "tags": [
+        "powers"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "sections": [
+    {
+      "id": "gowisely",
+      "title": "GOWISELY",
+      "subtitle": "Stop & Search Requirements (PACE Code A)",
+      "color": "#7C5CBF",
+      "items": [
+        {"letter": "G", "text": "Grounds for the search"},
+        {"letter": "O", "text": "Object of the search"},
+        {"letter": "W", "text": "Warrant card (if plain clothes)"},
+        {"letter": "I", "text": "Identification (name & collar number)"},
+        {"letter": "S", "text": "Station attached to"},
+        {"letter": "E", "text": "Entitled to a copy of the search record"},
+        {"letter": "L", "text": "Legal power being exercised"},
+        {"letter": "Y", "text": "You are being detained for a search"}
+      ]
+    },
+    {
+      "id": "dapip",
+      "title": "DAPIP",
+      "subtitle": "Five Elements of Theft (s1 Theft Act 1968)",
+      "color": "#D4A853",
+      "items": [
+        {"letter": "D", "text": "Dishonesty"},
+        {"letter": "A", "text": "Appropriation"},
+        {"letter": "P", "text": "Property"},
+        {"letter": "I", "text": "Identification (belonging to another)"},
+        {"letter": "P", "text": "Permanent deprivation (intention)"}
+      ]
+    },
+    {
+      "id": "necessity",
+      "title": "Necessity Criteria",
+      "subtitle": "PACE s.24(5) Code G",
+      "color": "#E05252",
+      "items": [
+        {"letter": "1", "text": "Ascertain name or address"},
+        {"letter": "2", "text": "Prevent physical injury to self or others"},
+        {"letter": "3", "text": "Prevent loss/damage to property"},
+        {"letter": "4", "text": "Prevent offence against public decency"},
+        {"letter": "5", "text": "Prevent unlawful obstruction of highway"},
+        {"letter": "6", "text": "Protect a child or vulnerable person"},
+        {"letter": "7", "text": "Allow prompt and effective investigation"},
+        {"letter": "8", "text": "Prevent disappearance of suspect"}
+      ]
+    },
+    {
+      "id": "assault_ladder",
+      "title": "Assault Ladder",
+      "subtitle": "Escalating offences with max penalties",
+      "color": "#E05252",
+      "items": [
+        {"letter": "1", "text": "Common Assault/Battery (s39 CJA 1988) - 6 months, Summary"},
+        {"letter": "2", "text": "ABH (s47 OAPA 1861) - 5 years, TEW"},
+        {"letter": "3", "text": "GBH/Wounding (s20 OAPA 1861) - 5 years, TEW"},
+        {"letter": "4", "text": "GBH with Intent (s18 OAPA 1861) - Life, Indictable only"}
+      ]
+    },
+    {
+      "id": "poa_ladder",
+      "title": "Public Order Ladder",
+      "subtitle": "POA 1986 offences by severity",
+      "color": "#5B8DEF",
+      "items": [
+        {"letter": "s5", "text": "HAD - Fine only (threatening/abusive, no intent needed)"},
+        {"letter": "s4A", "text": "Intentional HAD - 6 months (intent to cause HAD)"},
+        {"letter": "s4", "text": "Fear/Provocation of Violence - 6 months (immediate violence)"},
+        {"letter": "s3", "text": "Affray - 3 years (1+ person, hypothetical bystander)"},
+        {"letter": "s2", "text": "Violent Disorder - 5 years (3+ persons)"},
+        {"letter": "s1", "text": "Riot - 10 years (12+ persons, common purpose)"}
+      ]
+    },
+    {
+      "id": "caution",
+      "title": "The Caution",
+      "subtitle": "Required at point of arrest",
+      "color": "#4DAADB",
+      "items": [
+        {"letter": "\ud83d\udcdc", "text": "You do not have to say anything. But it may harm your defence if you do not mention when questioned something which you later rely on in court. Anything you do say may be given in evidence."}
+      ]
+    },
+    {
+      "id": "detention_limits",
+      "title": "Detention Time Limits",
+      "subtitle": "PACE ss.41-44",
+      "color": "#E07B39",
+      "items": [
+        {"letter": "24h", "text": "Initial maximum detention (all offences)"},
+        {"letter": "36h", "text": "Superintendent extension (indictable offences)"},
+        {"letter": "96h", "text": "Magistrates' Court maximum (indictable offences)"},
+        {"letter": "6h", "text": "First review by Inspector, then every 9 hours"}
+      ]
+    },
+    {
+      "id": "dash",
+      "title": "DASH",
+      "subtitle": "Domestic Abuse Risk Assessment",
+      "color": "#D4594E",
+      "items": [
+        {"letter": "D", "text": "Domestic Abuse"},
+        {"letter": "A", "text": "And"},
+        {"letter": "S", "text": "Stalking"},
+        {"letter": "H", "text": "Honour-based abuse"}
+      ]
+    }
+  ]
+}
