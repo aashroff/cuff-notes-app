@@ -6,9 +6,8 @@ import '../models/reference_section.dart';
 import 'storage_service.dart';
 
 class ContentService {
-  // ── CHANGE THIS to your GitHub username/repo ──
   static const _baseUrl =
-      'https://raw.githubusercontent.com/YOUR_USERNAME/cuffnotes-content/main/content';
+      'https://github.com/aashroff/cuffnotes-content/tree/main/content';
 
   final StorageService _storage;
 
