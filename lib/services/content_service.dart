@@ -7,7 +7,7 @@ import 'storage_service.dart';
 
 class ContentService {
   static const _baseUrl =
-      'https://github.com/aashroff/cuffnotes-content/tree/main/content';
+      'https://raw.githubusercontent.com/aashroff/cuffnotes-content/main/content';
 
   final StorageService _storage;
 
