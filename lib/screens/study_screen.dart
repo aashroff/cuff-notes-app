@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../models/topic.dart';
 import '../models/flashcard.dart';
+import '../models/acronym.dart';
 import '../models/srs_state.dart';
 import '../services/storage_service.dart';
 import '../theme/app_theme.dart';
@@ -13,12 +14,14 @@ class StudyScreen extends StatefulWidget {
   final Topic topic;
   final String? subcategory;
   final StorageService storage;
+  final List<Acronym> acronyms;
 
   const StudyScreen({
     super.key,
     required this.topic,
     this.subcategory,
     required this.storage,
+    this.acronyms = const [],
   });
 
   @override
@@ -46,12 +49,10 @@ class _StudyScreenState extends State<StudyScreen> {
 
   void _rate(int quality) {
     HapticFeedback.mediumImpact();
-    // Save SRS state
     final existing = widget.storage.getSrsState(_currentCard.id);
     final state = (existing ?? SrsState.initial(_currentCard.id)).review(quality);
     widget.storage.saveSrsState(state);
 
-    // Next card or complete
     if (_currentIndex < _cards.length - 1) {
       setState(() {
         _currentIndex++;
@@ -89,7 +90,6 @@ class _StudyScreenState extends State<StudyScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
-            // ── Progress header ──
             const SizedBox(height: 8),
             Row(
               children: [
@@ -116,7 +116,6 @@ class _StudyScreenState extends State<StudyScreen> {
             ),
             const SizedBox(height: 8),
 
-            // ── Progress bar ──
             ClipRRect(
               borderRadius: BorderRadius.circular(2),
               child: LinearProgressIndicator(
@@ -128,7 +127,6 @@ class _StudyScreenState extends State<StudyScreen> {
             ),
             const SizedBox(height: 20),
 
-            // ── Flashcard ──
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
@@ -139,10 +137,10 @@ class _StudyScreenState extends State<StudyScreen> {
                       topicColor: widget.topic.color,
                       showAnswer: _showAnswer,
                       onTap: _flip,
+                      acronyms: widget.acronyms,
                     ),
                     const SizedBox(height: 16),
 
-                    // ── SRS buttons (visible when answer shown) ──
                     AnimatedSwitcher(
                       duration: const Duration(milliseconds: 300),
                       child: _showAnswer

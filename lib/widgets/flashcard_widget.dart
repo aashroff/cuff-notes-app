@@ -3,14 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../models/flashcard.dart';
+import '../models/acronym.dart';
 import '../services/statute_links.dart';
 import '../theme/app_theme.dart';
+import 'linked_text.dart';
 
 class FlashcardWidget extends StatefulWidget {
   final Flashcard card;
   final Color topicColor;
   final bool showAnswer;
   final VoidCallback onTap;
+  final List<Acronym> acronyms;
 
   const FlashcardWidget({
     super.key,
@@ -18,6 +21,7 @@ class FlashcardWidget extends StatefulWidget {
     required this.topicColor,
     required this.showAnswer,
     required this.onTap,
+    this.acronyms = const [],
   });
 
   @override
@@ -51,7 +55,6 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
         _controller.reverse();
       }
     }
-    // Reset animation when card changes
     if (widget.card.id != oldWidget.card.id) {
       _controller.reset();
     }
@@ -146,8 +149,9 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
           children: [
             _buildDifficultyAndLabel(context, 'ANSWER'),
             const SizedBox(height: 16),
-            Text(
-              widget.card.answer,
+            LinkedText(
+              text: widget.card.answer,
+              acronyms: widget.acronyms,
               style: TextStyle(
                 fontSize: 14,
                 height: 1.75,
@@ -199,7 +203,6 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
     return GestureDetector(
       onTap: url != null
           ? () {
-              // Stop the card flip from triggering
               launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
             }
           : null,
@@ -235,12 +238,13 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
   }
 }
 
-/// Simplified version without full 3D flip, uses crossfade
+/// Simplified version using crossfade instead of 3D flip
 class SimpleFlashcardWidget extends StatelessWidget {
   final Flashcard card;
   final Color topicColor;
   final bool showAnswer;
   final VoidCallback onTap;
+  final List<Acronym> acronyms;
 
   const SimpleFlashcardWidget({
     super.key,
@@ -248,6 +252,7 @@ class SimpleFlashcardWidget extends StatelessWidget {
     required this.topicColor,
     required this.showAnswer,
     required this.onTap,
+    this.acronyms = const [],
   });
 
   @override
@@ -319,8 +324,9 @@ class SimpleFlashcardWidget extends StatelessWidget {
                   ),
                 )
               else
-                Text(
-                  card.answer,
+                LinkedText(
+                  text: card.answer,
+                  acronyms: acronyms,
                   style: TextStyle(
                     fontSize: 14,
                     height: 1.75,
@@ -333,11 +339,13 @@ class SimpleFlashcardWidget extends StatelessWidget {
                 return GestureDetector(
                   onTap: url != null
                       ? () {
-                          launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+                          launchUrl(Uri.parse(url),
+                              mode: LaunchMode.externalApplication);
                         }
                       : null,
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                     decoration: BoxDecoration(
                       color: topicColor.withValues(alpha: 0.08),
                       borderRadius: BorderRadius.circular(8),

@@ -9,6 +9,7 @@ import '../main.dart' show themeModeNotifier;
 import 'study_screen.dart';
 import 'quiz_screen.dart';
 import 'pocket_reference_screen.dart';
+import 'acronyms_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   final AppState appState;
@@ -25,7 +26,6 @@ class _HomeScreenState extends State<HomeScreen> {
   bool _showStats = false;
   final Set<String> _expandedTopics = {};
 
-  // Shorthand accessors
   AppState get _app => widget.appState;
   List<Topic> get _topics => _app.topics;
 
@@ -53,11 +53,10 @@ class _HomeScreenState extends State<HomeScreen> {
           topic: topic,
           subcategory: subcategory,
           storage: _app.storage,
+          acronyms: _app.acronyms,
         ),
       ),
-    ).then((_) {
-      setState(() {});
-    });
+    ).then((_) => setState(() {}));
   }
 
   void _navigateToQuiz() {
@@ -69,9 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
           storage: _app.storage,
         ),
       ),
-    ).then((_) {
-      setState(() {});
-    });
+    ).then((_) => setState(() {}));
   }
 
   void _navigateToReference() {
@@ -79,6 +76,15 @@ class _HomeScreenState extends State<HomeScreen> {
       context,
       MaterialPageRoute(
         builder: (_) => PocketReferenceScreen(sections: _app.references),
+      ),
+    );
+  }
+
+  void _navigateToAcronyms() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => AcronymsScreen(acronyms: _app.acronyms),
       ),
     );
   }
@@ -196,34 +202,42 @@ class _HomeScreenState extends State<HomeScreen> {
                           .map((r) => _buildSearchResult(context, r)),
                     ],
 
-                    // ── Main Content (hidden during search) ──
+                    // ── Main Content ──
                     if (_searchQuery.length <= 1) ...[
                       const SizedBox(height: 18),
                       _buildSectionHeader('Quick Actions'),
                       const SizedBox(height: 10),
+                      // Row 1: Quickfire + Reference
                       Row(
                         children: [
                           Expanded(
-                              child: _buildQuickAction(
-                            context,
-                            icon: Icons.bolt_rounded,
-                            title: 'Quickfire',
-                            subtitle: 'Random quiz across all topics',
-                            isPrimary: true,
-                            onTap: _navigateToQuiz,
-                          )),
+                            child: _buildQuickAction(
+                              context,
+                              icon: Icons.bolt_rounded,
+                              title: 'Quickfire',
+                              subtitle: 'Random quiz',
+                              isPrimary: true,
+                              onTap: _navigateToQuiz,
+                            ),
+                          ),
                           const SizedBox(width: 8),
                           Expanded(
-                              child: _buildQuickAction(
-                            context,
-                            icon: Icons.bookmark_outline_rounded,
-                            title: 'Reference',
-                            subtitle: 'Mnemonics & quick-ref',
-                            isPrimary: false,
-                            onTap: _navigateToReference,
-                          )),
+                            child: _buildQuickAction(
+                              context,
+                              icon: Icons.bookmark_outline_rounded,
+                              title: 'Reference',
+                              subtitle: 'Mnemonics',
+                              isPrimary: false,
+                              onTap: _navigateToReference,
+                            ),
+                          ),
                         ],
                       ),
+                      const SizedBox(height: 8),
+                      // Acronyms button (full width)
+                      _buildAcronymsBanner(context),
+
+                      // Topic List
                       const SizedBox(height: 24),
                       _buildSectionHeader(
                           'Legislation Areas \u00b7 ${_app.totalCards} cards'),
@@ -275,6 +289,78 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         );
       },
+    );
+  }
+
+  // ── Acronyms Banner ──
+  Widget _buildAcronymsBanner(BuildContext context) {
+    return Material(
+      color: context.cardBg,
+      borderRadius: BorderRadius.circular(16),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(16),
+        onTap: _navigateToAcronyms,
+        child: Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: context.borderColor),
+          ),
+          child: Row(
+            children: [
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  color: Theme.of(context)
+                      .colorScheme
+                      .primary
+                      .withValues(alpha: 0.08),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                alignment: Alignment.center,
+                child: Text(
+                  'A-Z',
+                  style: GoogleFonts.jetBrainsMono(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w700,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Acronym Glossary',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      '${_app.acronyms.length} acronyms \u2014 HAD, TEW, PACE, GBH...',
+                      style: TextStyle(
+                        fontSize: 11,
+                        color: context.dimText,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Icon(
+                Icons.arrow_forward_ios_rounded,
+                size: 14,
+                color: context.dimText,
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 
@@ -388,7 +474,8 @@ class _HomeScreenState extends State<HomeScreen> {
     required VoidCallback onTap,
   }) {
     return Material(
-      color: isPrimary ? Theme.of(context).colorScheme.primary : context.cardBg,
+      color:
+          isPrimary ? Theme.of(context).colorScheme.primary : context.cardBg,
       borderRadius: BorderRadius.circular(16),
       elevation: isPrimary ? 4 : 0,
       shadowColor: isPrimary

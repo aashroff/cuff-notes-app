@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:http/http.dart' as http;
 import '../models/topic.dart';
+import '../models/acronym.dart';
 import '../models/reference_section.dart';
 import 'storage_service.dart';
 
@@ -9,7 +10,6 @@ class ContentService {
   static const _baseUrl =
       'https://raw.githubusercontent.com/aashroff/cuffnotes-content/main/content';
 
-  // Fallback topic IDs if manifest cannot be loaded
   static const _fallbackTopicIds = [
     'theft',
     'assault',
@@ -24,10 +24,7 @@ class ContentService {
 
   ContentService(this._storage);
 
-  /// Fetch the list of topic IDs from the remote manifest,
-  /// falling back to cache, then bundled asset, then hardcoded list.
   Future<List<String>> _getTopicIds() async {
-    // 1. Try GitHub manifest
     try {
       final response = await http
           .get(Uri.parse('$_baseUrl/manifest.json'))
@@ -41,7 +38,6 @@ class ContentService {
       }
     } catch (_) {}
 
-    // 2. Try cached manifest
     try {
       final cached = await _storage.getCachedContent('manifest');
       if (cached != null) {
@@ -50,33 +46,27 @@ class ContentService {
       }
     } catch (_) {}
 
-    // 3. Try bundled manifest
     try {
       final raw = await rootBundle.loadString('assets/content/manifest.json');
       final data = json.decode(raw) as Map<String, dynamic>;
       return (data['topics'] as List<dynamic>).cast<String>();
     } catch (_) {}
 
-    // 4. Hardcoded fallback
     return _fallbackTopicIds;
   }
 
-  /// Load all topics dynamically based on the manifest.
   Future<List<Topic>> loadAllTopics() async {
     final topicIds = await _getTopicIds();
     final topics = <Topic>[];
     for (final id in topicIds) {
       try {
         topics.add(await loadTopic(id));
-      } catch (_) {
-        // Skip topics that fail to load rather than crashing
-      }
+      } catch (_) {}
     }
     return topics;
   }
 
   Future<Topic> loadTopic(String topicId) async {
-    // 1. Try fetching from GitHub
     try {
       final response = await http
           .get(Uri.parse('$_baseUrl/$topicId.json'))
@@ -92,7 +82,6 @@ class ContentService {
       }
     } catch (_) {}
 
-    // 2. Try loading from local cache
     try {
       final cached = await _storage.getCachedContent(topicId);
       if (cached != null) {
@@ -100,14 +89,51 @@ class ContentService {
       }
     } catch (_) {}
 
-    // 3. Fall back to bundled asset
     final raw = await rootBundle.loadString('assets/content/$topicId.json');
     return Topic.fromJson(json.decode(raw) as Map<String, dynamic>);
   }
 
-  /// Load reference sections (GOWISELY, Necessity, etc.)
+  /// Load acronyms glossary
+  Future<List<Acronym>> loadAcronyms() async {
+    try {
+      final response = await http
+          .get(Uri.parse('$_baseUrl/acronyms.json'))
+          .timeout(const Duration(seconds: 5));
+      if (response.statusCode == 200) {
+        final data = json.decode(response.body) as Map<String, dynamic>;
+        final cachedVersion = await _storage.getContentVersion('acronyms');
+        final remoteVersion = data['version'] as int? ?? 1;
+        if (remoteVersion > cachedVersion) {
+          await _storage.cacheContent(
+              'acronyms', response.body, remoteVersion);
+        }
+        return _parseAcronyms(data);
+      }
+    } catch (_) {}
+
+    try {
+      final cached = await _storage.getCachedContent('acronyms');
+      if (cached != null) {
+        return _parseAcronyms(json.decode(cached) as Map<String, dynamic>);
+      }
+    } catch (_) {}
+
+    try {
+      final raw = await rootBundle.loadString('assets/content/acronyms.json');
+      return _parseAcronyms(json.decode(raw) as Map<String, dynamic>);
+    } catch (_) {
+      return [];
+    }
+  }
+
+  List<Acronym> _parseAcronyms(Map<String, dynamic> data) {
+    return (data['acronyms'] as List<dynamic>)
+        .map((a) => Acronym.fromJson(a as Map<String, dynamic>))
+        .toList();
+  }
+
+  /// Load reference sections
   Future<List<ReferenceSection>> loadReferences() async {
-    // 1. Try GitHub
     try {
       final response = await http
           .get(Uri.parse('$_baseUrl/reference.json'))
@@ -124,7 +150,6 @@ class ContentService {
       }
     } catch (_) {}
 
-    // 2. Try cache
     try {
       final cached = await _storage.getCachedContent('reference');
       if (cached != null) {
@@ -133,7 +158,6 @@ class ContentService {
       }
     } catch (_) {}
 
-    // 3. Bundled asset
     try {
       final raw =
           await rootBundle.loadString('assets/content/reference.json');
