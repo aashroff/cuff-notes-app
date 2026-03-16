@@ -54,7 +54,6 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
     // Reset animation when card changes
     if (widget.card.id != oldWidget.card.id) {
       _controller.reset();
-      _showFront = true;
     }
   }
 
