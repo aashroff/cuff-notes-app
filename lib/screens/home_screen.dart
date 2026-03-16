@@ -56,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     ).then((_) {
-      _app.notifyListeners(); // Refresh stats on return
+      setState(() {});
     });
   }
 
@@ -70,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     ).then((_) {
-      _app.notifyListeners();
+      setState(() {});
     });
   }
 

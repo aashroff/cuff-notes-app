@@ -158,25 +158,19 @@ class _SplashScreenState extends State<SplashScreen>
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // ── Shield icon ──
+                  // ── Icon ──
                   Opacity(
                     opacity: _logoOpacity.value,
                     child: Transform.scale(
                       scale: _logoScale.value,
-                      child: Container(
+                      child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset(
+                        'assets/icon/cuffnotes_icon.png',
                         width: 72,
                         height: 72,
-                        decoration: BoxDecoration(
-                          color: primary.withValues(alpha: 0.1),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        alignment: Alignment.center,
-                        child: Icon(
-                          Icons.shield_outlined,
-                          size: 36,
-                          color: primary,
-                        ),
                       ),
+                    ),
                     ),
                   ),
                   const SizedBox(height: 24),
