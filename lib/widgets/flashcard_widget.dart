@@ -28,7 +28,6 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
-  bool _showFront = true;
 
   @override
   void initState() {
