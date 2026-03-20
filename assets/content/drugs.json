@@ -1,0 +1,154 @@
+{
+  "id": "drugs",
+  "title": "Misuse of Drugs",
+  "icon": "💊",
+  "color": "#8B5CF6",
+  "version": 1,
+  "subcategories": ["Classification & Scheduling", "Possession & Supply", "Production & Cultivation", "Powers & Procedures", "Key Distinctions"],
+  "cards": [
+    {
+      "id": "dr01",
+      "question": "What are the three classifications of controlled drugs under the Misuse of Drugs Act 1971?",
+      "answer": "Drugs are classified based on their perceived harmfulness. Class A carries the most severe penalties: heroin, cocaine, crack cocaine, ecstasy (MDMA), LSD, magic mushrooms (when prepared), methamphetamine, and injectable Class B drugs. Class B includes cannabis, amphetamine, barbiturates, codeine, ketamine, mephedrone, and synthetic cannabinoids. Class C includes anabolic steroids, benzodiazepines (e.g. diazepam), GHB/GBL, and khat. The classification determines the maximum penalty for each offence.",
+      "statute": "Misuse of Drugs Act 1971, s.2 & Sched.2",
+      "subcategory": "Classification & Scheduling",
+      "difficulty": 2,
+      "tags": ["class A", "class B", "class C", "classification"]
+    },
+    {
+      "id": "dr02",
+      "question": "What is the offence of possession of a controlled drug under s5(1) MDA 1971?",
+      "answer": "It is an offence for a person to have a controlled drug in their possession. The prosecution must prove the defendant had physical custody or control of the item, knew they had something in their possession, and that the item was in fact a controlled drug. The defendant does not need to know exactly which drug it is. Maximum penalties vary by class: Class A carries 7 years imprisonment and unlimited fine; Class B carries 5 years and unlimited fine; Class C carries 2 years and unlimited fine. All are TEW offences.",
+      "statute": "Misuse of Drugs Act 1971, s.5(1)",
+      "subcategory": "Possession & Supply",
+      "difficulty": 1,
+      "tags": ["possession", "controlled drug", "penalties"]
+    },
+    {
+      "id": "dr03",
+      "question": "What is the offence of possession with intent to supply under s5(3) MDA 1971?",
+      "answer": "It is an offence for a person to have a controlled drug in their possession with intent to supply it to another, whether by sale, gift, or any other distribution. Intent can be proven by direct evidence (messages, scales, dealer lists, cash) or circumstantial evidence (quantity, packaging, multiple deals). Maximum penalties: Class A carries life imprisonment and unlimited fine; Class B carries 14 years and unlimited fine; Class C carries 14 years and unlimited fine. This is significantly more serious than simple possession.",
+      "statute": "Misuse of Drugs Act 1971, s.5(3)",
+      "subcategory": "Possession & Supply",
+      "difficulty": 2,
+      "tags": ["PWITS", "intent to supply", "dealing"]
+    },
+    {
+      "id": "dr04",
+      "question": "What is the offence of supplying or offering to supply a controlled drug under s4(3) MDA 1971?",
+      "answer": "It is an offence for a person to supply or offer to supply a controlled drug to another, or to be concerned in the supply or making of an offer to supply. Supply means transferring physical control of the drug to another person. An offer to supply is complete when the offer is made, even if no actual supply takes place and even if the substance is not actually a controlled drug (provided the person believed it was). Maximum penalties: Class A carries life imprisonment; Class B and C carry 14 years.",
+      "statute": "Misuse of Drugs Act 1971, s.4(3)",
+      "subcategory": "Possession & Supply",
+      "difficulty": 2,
+      "tags": ["supply", "offer to supply", "concerned in"]
+    },
+    {
+      "id": "dr05",
+      "question": "What is the offence of production of a controlled drug under s4(2) MDA 1971?",
+      "answer": "It is an offence for a person to produce a controlled drug, or to be concerned in the production of a controlled drug. Production means manufacturing, cultivating, or any other method by which the drug is produced. Being 'concerned in' extends liability to those who assist, finance, or facilitate production even without physically producing the drug themselves. Maximum penalties: Class A carries life imprisonment; Class B carries 14 years; Class C carries 14 years.",
+      "statute": "Misuse of Drugs Act 1971, s.4(2)",
+      "subcategory": "Production & Cultivation",
+      "difficulty": 2,
+      "tags": ["production", "manufacturing", "concerned in"]
+    },
+    {
+      "id": "dr06",
+      "question": "What is the offence of cultivation of cannabis under s6 MDA 1971?",
+      "answer": "It is an offence for a person to cultivate any plant of the genus Cannabis. This is a standalone offence separate from production. It covers the entire growing process from planting seeds to harvesting. It does not matter whether the plants have reached maturity or contain significant levels of THC. Even a single plant constitutes the offence. TEW offence carrying a maximum of 14 years imprisonment and unlimited fine. Evidence of cultivation includes grow lights, hydroponics equipment, fertilisers, and timers.",
+      "statute": "Misuse of Drugs Act 1971, s.6",
+      "subcategory": "Production & Cultivation",
+      "difficulty": 1,
+      "tags": ["cannabis", "cultivation", "growing"]
+    },
+    {
+      "id": "dr07",
+      "question": "What is the defence under s5(4) MDA 1971 for possession?",
+      "answer": "It is a defence for a person charged with possession to prove that, knowing or suspecting it to be a controlled drug, they took possession of it to prevent another from committing or continuing an offence, or to deliver it to a person lawfully entitled to custody of it, and that as soon as possible after taking possession they took all reasonable steps to destroy the drug or deliver it to a person lawfully entitled to it. This covers scenarios like a parent finding drugs on their child and taking them to hand to police.",
+      "statute": "Misuse of Drugs Act 1971, s.5(4)",
+      "subcategory": "Key Distinctions",
+      "difficulty": 3,
+      "tags": ["defence", "prevention", "safekeeping"]
+    },
+    {
+      "id": "dr08",
+      "question": "What is the defence under s28 MDA 1971?",
+      "answer": "Section 28 provides a defence where the accused did not know, suspect, or have reason to suspect that the substance was a controlled drug, or did not know, suspect, or have reason to suspect that it was the particular controlled drug alleged. The burden of proof shifts to the defendant on the balance of probabilities. This is known as the 'lack of knowledge' defence. For example, a person who genuinely believed a package contained legal items rather than drugs could rely on this defence.",
+      "statute": "Misuse of Drugs Act 1971, s.28",
+      "subcategory": "Key Distinctions",
+      "difficulty": 3,
+      "tags": ["defence", "lack of knowledge", "burden of proof"]
+    },
+    {
+      "id": "dr09",
+      "question": "What power does s23(1) MDA 1971 give police to search persons?",
+      "answer": "A constable may, if they have reasonable grounds to suspect that any person is in possession of a controlled drug, search that person and detain them for the purpose of searching them. The constable may also search any vehicle or vessel in which they suspect controlled drugs may be found and require the person in charge of the vehicle or vessel to stop it. GOWISELY requirements apply as with any stop and search. This power does not require the person to be arrested first.",
+      "statute": "Misuse of Drugs Act 1971, s.23(1)",
+      "subcategory": "Powers & Procedures",
+      "difficulty": 1,
+      "tags": ["search", "reasonable grounds", "stop and search"]
+    },
+    {
+      "id": "dr10",
+      "question": "What power does s23(3) MDA 1971 give police regarding premises?",
+      "answer": "If a justice of the peace is satisfied by information on oath that there are reasonable grounds to suspect that controlled drugs are in the possession of a person on any premises, or that a document relating to drug dealing is in the possession of a person on premises, the justice may issue a warrant authorising a constable to enter the premises (by force if necessary), search the premises and any persons found therein, and seize and detain anything which appears to be evidence of an offence under the Act.",
+      "statute": "Misuse of Drugs Act 1971, s.23(3)",
+      "subcategory": "Powers & Procedures",
+      "difficulty": 2,
+      "tags": ["warrant", "premises", "search", "entry"]
+    },
+    {
+      "id": "dr11",
+      "question": "What is the offence of permitting premises to be used for drug activities under s8 MDA 1971?",
+      "answer": "A person commits an offence if, being the occupier or concerned in the management of any premises, they knowingly permit or suffer any of the following on those premises: producing or attempting to produce a controlled drug, supplying or attempting to supply a controlled drug, preparing opium for smoking, or smoking cannabis, cannabis resin, or prepared opium. The prosecution must prove the occupier knew what was happening and permitted it. Maximum penalties depend on the drug classification involved.",
+      "statute": "Misuse of Drugs Act 1971, s.8",
+      "subcategory": "Possession & Supply",
+      "difficulty": 2,
+      "tags": ["premises", "occupier", "permit", "knowingly"]
+    },
+    {
+      "id": "dr12",
+      "question": "What is the difference between simple possession and possession with intent to supply?",
+      "answer": "Simple possession (s5(1)) requires only that the person had the drug in their possession. Possession with intent to supply (s5(3)) requires possession plus an intention to supply to another. Evidence of intent includes: quantity of drugs beyond personal use, drug paraphernalia (scales, bags, cling film), multiple mobile phones, large amounts of cash, messages discussing deals, 'tick lists' (debt records), and witness evidence. The penalty difference is significant: simple possession of Class A carries a maximum of 7 years, whereas PWITS Class A carries life imprisonment.",
+      "statute": "Misuse of Drugs Act 1971, s.5(1) vs s.5(3)",
+      "subcategory": "Key Distinctions",
+      "difficulty": 2,
+      "tags": ["distinction", "PWITS", "evidence", "intent"]
+    },
+    {
+      "id": "dr13",
+      "question": "What are the maximum penalties for possession of each drug class?",
+      "answer": "Class A (heroin, cocaine, ecstasy, LSD, meth): 7 years imprisonment and unlimited fine on indictment; 6 months and level 5 fine summarily. Class B (cannabis, amphetamine, ketamine): 5 years imprisonment and unlimited fine on indictment; 3 months and level 4 fine summarily. Class C (anabolic steroids, benzodiazepines, GHB): 2 years imprisonment and unlimited fine on indictment; 3 months and level 4 fine summarily. All are TEW offences. Cannabis possession for personal use often results in a cannabis warning or PND for adults with no previous record.",
+      "statute": "Misuse of Drugs Act 1971, s.25 & Sched.4",
+      "subcategory": "Classification & Scheduling",
+      "difficulty": 2,
+      "tags": ["penalties", "maximum sentence", "class A B C"]
+    },
+    {
+      "id": "dr14",
+      "question": "What are the maximum penalties for supply/PWITS of each drug class?",
+      "answer": "Class A (supply or PWITS): Life imprisonment and unlimited fine on indictment; 6 months and unlimited fine summarily. Class B: 14 years imprisonment and unlimited fine on indictment; 6 months and unlimited fine summarily. Class C: 14 years imprisonment and unlimited fine on indictment; 3 months and unlimited fine summarily. These significantly exceed simple possession penalties, reflecting the seriousness with which the law treats drug dealing and distribution.",
+      "statute": "Misuse of Drugs Act 1971, s.25 & Sched.4",
+      "subcategory": "Classification & Scheduling",
+      "difficulty": 2,
+      "tags": ["penalties", "supply", "PWITS", "life"]
+    },
+    {
+      "id": "dr15",
+      "question": "What does 'concerned in' mean in drug supply offences?",
+      "answer": "Being 'concerned in' the supply of controlled drugs under s4(3)(b) extends liability beyond the person who physically hands over the drug. It covers anyone who plays a role in the chain of supply, including: acting as a lookout, storing drugs for a dealer, driving a dealer to meet customers, allowing premises to be used, packaging or dividing drugs, collecting money, introducing buyers to sellers, and holding a phone used to arrange deals. County lines operations rely on this concept to prosecute recruiters and organisers who never physically handle drugs.",
+      "statute": "Misuse of Drugs Act 1971, s.4(3)(b)",
+      "subcategory": "Key Distinctions",
+      "difficulty": 3,
+      "tags": ["concerned in", "county lines", "chain of supply"]
+    },
+    {
+      "id": "dr16",
+      "question": "What is a Psychoactive Substances Act 2016 offence and how does it relate to the MDA?",
+      "answer": "The PSA 2016 covers substances not controlled under the MDA (formerly known as 'legal highs' or 'novel psychoactive substances'). A psychoactive substance is anything that stimulates or depresses the central nervous system or causes hallucinations. Exempted substances include alcohol, tobacco, caffeine, food, and medicines. Key offences include production, supply, offer to supply, possession with intent to supply, and importation/exportation. Simple possession is NOT an offence under PSA (unlike MDA). Maximum penalty for supply is 7 years. The PSA complements the MDA by catching drugs not yet classified.",
+      "statute": "Psychoactive Substances Act 2016",
+      "subcategory": "Key Distinctions",
+      "difficulty": 3,
+      "tags": ["PSA", "legal highs", "NPS", "psychoactive"]
+    }
+  ]
+}

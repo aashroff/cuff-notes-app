@@ -1,0 +1,154 @@
+{
+  "id": "road_traffic",
+  "title": "Road Traffic Offences",
+  "icon": "🚗",
+  "color": "#3B82F6",
+  "version": 1,
+  "subcategories": ["Drink & Drug Driving", "Dangerous & Careless Driving", "Documents & Insurance", "Accidents & Reporting", "Powers"],
+  "cards": [
+    {
+      "id": "rt01",
+      "question": "What is the offence of driving with excess alcohol under s5 RTA 1988?",
+      "answer": "It is an offence to drive or attempt to drive, or be in charge of, a motor vehicle on a road or public place with alcohol concentration exceeding the prescribed limit. The limits are: 35 microgrammes per 100ml breath, 80 milligrammes per 100ml blood, or 107 milligrammes per 100ml urine. Summary only offence carrying up to 6 months imprisonment, unlimited fine, and mandatory disqualification of at least 12 months (3 years if repeat offence within 10 years).",
+      "statute": "Road Traffic Act 1988, s.5",
+      "subcategory": "Drink & Drug Driving",
+      "difficulty": 2,
+      "tags": ["drink driving", "alcohol", "limits"]
+    },
+    {
+      "id": "rt02",
+      "question": "What is the offence of driving whilst unfit through drink or drugs under s4 RTA 1988?",
+      "answer": "It is an offence to drive or attempt to drive, or be in charge of, a mechanically propelled vehicle on a road or other public place while unfit through drink or drugs. Unfitness means the ability to drive properly is impaired. Unlike s5, this does not require exceeding a prescribed limit but rather proving actual impairment. This section also covers drugs (both illegal and prescribed). TEW offence carrying up to 6 months summary or 6 months on indictment, unlimited fine, and mandatory disqualification.",
+      "statute": "Road Traffic Act 1988, s.4",
+      "subcategory": "Drink & Drug Driving",
+      "difficulty": 2,
+      "tags": ["impairment", "drugs", "drink driving"]
+    },
+    {
+      "id": "rt03",
+      "question": "What is the offence of failing to provide a specimen under s6 RTA 1988?",
+      "answer": "A person commits an offence if, without reasonable excuse, they fail to cooperate with a preliminary test (breath test, impairment test, or drug test) required by a constable under s6. A constable may require a preliminary test if they reasonably suspect a person is driving, has been driving, or is about to drive with alcohol or drugs in their body, or after an accident. Failure carries a maximum of 6 months imprisonment, unlimited fine, and discretionary disqualification.",
+      "statute": "Road Traffic Act 1988, s.6",
+      "subcategory": "Drink & Drug Driving",
+      "difficulty": 2,
+      "tags": ["breath test", "specimen", "refusal"]
+    },
+    {
+      "id": "rt04",
+      "question": "What is the offence of drug driving under s5A RTA 1988?",
+      "answer": "It is an offence to drive or attempt to drive, or be in charge of, a motor vehicle on a road or public place with a specified controlled drug in the body exceeding the specified limit. There are 17 specified drugs, each with prescribed limits. Eight are illegal drugs (e.g. cannabis, cocaine, MDMA) with very low thresholds. Nine are prescription drugs (e.g. diazepam, morphine) with higher thresholds to allow therapeutic use. A medical defence exists for prescription drugs taken as directed.",
+      "statute": "Road Traffic Act 1988, s.5A",
+      "subcategory": "Drink & Drug Driving",
+      "difficulty": 3,
+      "tags": ["drug driving", "specified drugs", "limits"]
+    },
+    {
+      "id": "rt05",
+      "question": "What is the offence of dangerous driving under s2 RTA 1988?",
+      "answer": "A person is guilty of dangerous driving if the way they drive falls far below what would be expected of a competent and careful driver, and it would be obvious to a competent and careful driver that driving in that way would be dangerous. Dangerous refers to danger of injury to any person or serious damage to property. Regard is also had to the state of the vehicle. TEW offence carrying a maximum of 2 years imprisonment, unlimited fine, and mandatory disqualification of at least 12 months with extended retest.",
+      "statute": "Road Traffic Act 1988, s.2",
+      "subcategory": "Dangerous & Careless Driving",
+      "difficulty": 2,
+      "tags": ["dangerous driving", "far below", "standard"]
+    },
+    {
+      "id": "rt06",
+      "question": "What is the offence of careless driving under s3 RTA 1988?",
+      "answer": "A person is guilty of careless or inconsiderate driving if the way they drive falls below what would be expected of a competent and careful driver. Inconsiderate driving means driving without reasonable consideration for other persons using the road. The key distinction from dangerous driving is 'falls below' versus 'falls far below'. Summary only offence carrying an unlimited fine and discretionary disqualification with 3-9 penalty points.",
+      "statute": "Road Traffic Act 1988, s.3",
+      "subcategory": "Dangerous & Careless Driving",
+      "difficulty": 2,
+      "tags": ["careless driving", "below standard", "inconsiderate"]
+    },
+    {
+      "id": "rt07",
+      "question": "What is the offence of causing death by dangerous driving under s1 RTA 1988?",
+      "answer": "A person who causes the death of another person by driving a mechanically propelled vehicle dangerously on a road or other public place is guilty of this offence. The same standard of dangerous driving applies as s2 (far below the standard of a competent and careful driver). Indictable only offence carrying a maximum of life imprisonment, unlimited fine, and mandatory disqualification of at least 5 years with extended retest. One of the most serious road traffic offences.",
+      "statute": "Road Traffic Act 1988, s.1",
+      "subcategory": "Dangerous & Careless Driving",
+      "difficulty": 3,
+      "tags": ["death", "dangerous driving", "life imprisonment"]
+    },
+    {
+      "id": "rt08",
+      "question": "What is the offence of causing death by careless driving whilst under the influence under s3A RTA 1988?",
+      "answer": "A person is guilty if they cause the death of another by driving without due care and attention, or without reasonable consideration, while unfit through drink or drugs, over the prescribed alcohol limit, over the prescribed drug limit, or failing to provide a specimen when required. TEW offence carrying a maximum of 14 years imprisonment, unlimited fine, and mandatory disqualification of at least 2 years.",
+      "statute": "Road Traffic Act 1988, s.3A",
+      "subcategory": "Dangerous & Careless Driving",
+      "difficulty": 3,
+      "tags": ["death", "careless", "drink drugs"]
+    },
+    {
+      "id": "rt09",
+      "question": "What is the offence of driving without insurance under s143 RTA 1988?",
+      "answer": "A person must not use, or cause or permit any other person to use, a motor vehicle on a road or other public place unless there is a policy of insurance in respect of third party risks. It is a strict liability offence. Summary only offence carrying an unlimited fine, discretionary disqualification, and 6-8 penalty points. Police can seize and remove uninsured vehicles under s165A RTA 1988.",
+      "statute": "Road Traffic Act 1988, s.143",
+      "subcategory": "Documents & Insurance",
+      "difficulty": 1,
+      "tags": ["insurance", "no insurance", "strict liability"]
+    },
+    {
+      "id": "rt10",
+      "question": "What is the offence of driving otherwise than in accordance with a licence under s87 RTA 1988?",
+      "answer": "It is an offence for a person to drive on a road a motor vehicle of any class otherwise than in accordance with a licence authorising them to drive a motor vehicle of that class. This covers driving without a licence entirely, driving a class of vehicle not covered by the licence held, or driving in breach of licence conditions (e.g. provisional licence holder driving unsupervised). Summary only offence carrying a maximum fine of level 3 (1000 pounds) and discretionary disqualification.",
+      "statute": "Road Traffic Act 1988, s.87",
+      "subcategory": "Documents & Insurance",
+      "difficulty": 1,
+      "tags": ["licence", "no licence", "provisional"]
+    },
+    {
+      "id": "rt11",
+      "question": "What must a driver do after an accident under s170 RTA 1988?",
+      "answer": "If an accident occurs owing to the presence of a mechanically propelled vehicle on a road causing injury to any person, damage to another vehicle, damage to an animal (horse, cattle, ass, mule, sheep, pig, goat, dog), or damage to property on or adjacent to the road, the driver must stop, and if required to do so by any person having reasonable grounds, give their name, address, vehicle owner details, and insurance. If the driver does not exchange details at the scene, they must report the accident to a police station or constable as soon as reasonably practicable and in any case within 24 hours. If injury was caused, the driver must also produce their insurance certificate at the time or report to police within 24 hours.",
+      "statute": "Road Traffic Act 1988, s.170",
+      "subcategory": "Accidents & Reporting",
+      "difficulty": 2,
+      "tags": ["accident", "stop", "report", "24 hours"]
+    },
+    {
+      "id": "rt12",
+      "question": "What is the offence of failing to stop after an accident under s170 RTA 1988?",
+      "answer": "A person commits an offence if they fail to comply with the duty to stop after an accident, the duty to give particulars, or the duty to report to police. This is commonly known as 'hit and run'. Summary only offence carrying 6 months imprisonment, unlimited fine, and discretionary disqualification with 5-10 penalty points. Where the accident involves injury and the driver knew injury was caused, the court should consider custodial sentences.",
+      "statute": "Road Traffic Act 1988, s.170(4)",
+      "subcategory": "Accidents & Reporting",
+      "difficulty": 2,
+      "tags": ["fail to stop", "hit and run", "report"]
+    },
+    {
+      "id": "rt13",
+      "question": "What power does s163 RTA 1988 give police to stop vehicles?",
+      "answer": "A person driving a mechanically propelled vehicle on a road must stop the vehicle on being required to do so by a constable in uniform. Similarly, a person riding a cycle on a road must stop on being required to do so by a constable in uniform. No grounds or suspicion are needed. The power is absolute. Failure to stop is a summary only offence carrying a maximum fine of level 3 (1000 pounds). This is a key power because it does not require any suspicion of an offence.",
+      "statute": "Road Traffic Act 1988, s.163",
+      "subcategory": "Powers",
+      "difficulty": 1,
+      "tags": ["stop vehicle", "constable in uniform", "no suspicion"]
+    },
+    {
+      "id": "rt14",
+      "question": "What power does s165 RTA 1988 give police regarding documents?",
+      "answer": "A constable may require a person driving a motor vehicle on a road to produce their driving licence, insurance certificate, and MOT certificate for examination. If the driver cannot produce them immediately, they may be issued a HORT/1 form requiring production at a police station of their choice within 7 days. The driver can choose any police station and has 7 days from the date of issue to produce the documents.",
+      "statute": "Road Traffic Act 1988, s.165",
+      "subcategory": "Powers",
+      "difficulty": 1,
+      "tags": ["documents", "produce", "HORT1", "7 days"]
+    },
+    {
+      "id": "rt15",
+      "question": "What power does s165A RTA 1988 give police regarding uninsured vehicles?",
+      "answer": "Where a constable in uniform reasonably believes a motor vehicle is being driven without insurance in contravention of s143, they may seize the vehicle and, if necessary, use reasonable force. The vehicle may be removed to a place of storage. The registered keeper must pay recovery and storage charges. If not recovered within 14 days of the notice being served, the vehicle may be destroyed or disposed of. This is a powerful deterrent against uninsured driving.",
+      "statute": "Road Traffic Act 1988, s.165A",
+      "subcategory": "Powers",
+      "difficulty": 2,
+      "tags": ["seize", "uninsured", "removal"]
+    },
+    {
+      "id": "rt16",
+      "question": "What is the difference between dangerous driving and careless driving?",
+      "answer": "The key distinction is the degree to which driving falls below the expected standard. Dangerous driving (s2) requires driving that falls FAR BELOW the standard of a competent and careful driver, and it must be OBVIOUS that driving that way would be dangerous. Careless driving (s3) only requires driving that falls BELOW the standard. Dangerous driving is TEW carrying up to 2 years imprisonment with mandatory disqualification. Careless driving is summary only with a fine and discretionary disqualification. The test is objective based on a hypothetical competent and careful driver.",
+      "statute": "Road Traffic Act 1988, s.2 vs s.3",
+      "subcategory": "Dangerous & Careless Driving",
+      "difficulty": 2,
+      "tags": ["distinction", "far below", "below", "standard"]
+    }
+  ]
+}

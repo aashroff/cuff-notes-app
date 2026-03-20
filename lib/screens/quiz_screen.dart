@@ -57,6 +57,16 @@ class _QuizScreenState extends State<QuizScreen> {
     _expandedOptionId = null;
   }
 
+  void _toggleExpand(String cardId) {
+    setState(() {
+      if (_expandedOptionId == cardId) {
+        _expandedOptionId = null;
+      } else {
+        _expandedOptionId = cardId;
+      }
+    });
+  }
+
   void _answer(({Flashcard card, Topic topic}) option) {
     if (_answered) return;
     HapticFeedback.mediumImpact();
@@ -81,20 +91,13 @@ class _QuizScreenState extends State<QuizScreen> {
     });
   }
 
-  /// Extracts the first sentence from the answer for a compact preview
-  String _firstSentence(String text) {
-    // Split on period followed by space or end, but not on things like "s.24" or "s.1(1)"
-    final cleaned = text.replaceAll(RegExp(r's\.(\d)'), 'sSECTION\$1');
-    final idx = cleaned.indexOf(RegExp(r'\.\s'));
-    if (idx > 0 && idx < 150) {
-      return '${text.substring(0, idx + 1)}';
+  String _getFirstSentence(String text) {
+    final match = RegExp(r'[.!?]').firstMatch(text);
+    if (match != null && match.start < 120) {
+      return text.substring(0, match.start + 1);
     }
-    if (text.length > 120) {
-      // Fall back to word boundary near 120 chars
-      final spaceIdx = text.lastIndexOf(' ', 120);
-      return '${text.substring(0, spaceIdx > 60 ? spaceIdx : 120)}...';
-    }
-    return text;
+    if (text.length <= 80) return text;
+    return text.substring(0, 80);
   }
 
   @override
@@ -117,71 +120,84 @@ class _QuizScreenState extends State<QuizScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
-            // ── Compact score bar ──
+            // ── Score bar ──
             const SizedBox(height: 8),
-            Row(
-              children: [
-                // Score pill
-                Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                  decoration: BoxDecoration(
-                    color: context.cardBg,
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: context.borderColor),
-                  ),
-                  child: Row(
-                    children: [
-                      Text(
-                        '$_correct/$_total',
-                        style: GoogleFonts.jetBrainsMono(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w700,
-                          color: Theme.of(context).colorScheme.primary,
+            Card(
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                child: Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('SCORE',
+                            style: TextStyle(
+                                fontSize: 9,
+                                color: context.dimText,
+                                letterSpacing: 0.8,
+                                fontWeight: FontWeight.w600)),
+                        Text(
+                          '$_correct/$_total',
+                          style: GoogleFonts.jetBrainsMono(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
                         ),
-                      ),
-                      const SizedBox(width: 12),
-                      Text(
-                        '\u{1F525} $_streak',
-                        style: GoogleFonts.jetBrainsMono(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w700,
-                          color: context.warning,
+                      ],
+                    ),
+                    const SizedBox(width: 20),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('STREAK',
+                            style: TextStyle(
+                                fontSize: 9,
+                                color: context.dimText,
+                                letterSpacing: 0.8,
+                                fontWeight: FontWeight.w600)),
+                        Text(
+                          '\ud83d\udd25 $_streak',
+                          style: GoogleFonts.jetBrainsMono(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                            color: context.warning,
+                          ),
                         ),
+                      ],
+                    ),
+                    const Spacer(),
+                    Text(
+                      '$pct%',
+                      style: GoogleFonts.jetBrainsMono(
+                        fontSize: 28,
+                        fontWeight: FontWeight.w800,
+                        color: pctColor,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-                const Spacer(),
-                Text(
-                  '$pct%',
-                  style: GoogleFonts.jetBrainsMono(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w800,
-                    color: pctColor,
-                  ),
-                ),
-              ],
+              ),
             ),
-            const SizedBox(height: 14),
+            const SizedBox(height: 16),
 
-            // ── Scrollable content ──
+            // ── Question ──
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // ── Question card ──
                     Card(
                       child: Padding(
-                        padding: const EdgeInsets.all(18),
+                        padding: const EdgeInsets.all(20),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               children: [
                                 Text(_currentQuestion.topic.icon,
-                                    style: const TextStyle(fontSize: 16)),
+                                    style: const TextStyle(fontSize: 18)),
                                 const SizedBox(width: 6),
                                 Container(
                                   padding: const EdgeInsets.symmetric(
@@ -202,7 +218,7 @@ class _QuizScreenState extends State<QuizScreen> {
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 12),
+                            const SizedBox(height: 14),
                             Text(
                               _currentQuestion.card.question,
                               style: GoogleFonts.newsreader(
@@ -215,7 +231,29 @@ class _QuizScreenState extends State<QuizScreen> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 12),
+                    const SizedBox(height: 8),
+
+                    // Gesture hint
+                    if (!_answered)
+                      Center(
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 12, vertical: 5),
+                          decoration: BoxDecoration(
+                            color: context.cardBg2,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Text(
+                            'Tap to preview  \u00b7  Double-tap to answer',
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: context.dimText,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ),
+                    const SizedBox(height: 8),
 
                     // ── Options ──
                     ...List.generate(_options.length, (i) {
@@ -223,6 +261,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       final isSelected = _selectedId == opt.card.id;
                       final isCorrectOption =
                           opt.card.id == _currentQuestion.card.id;
+                      final isExpanded = _expandedOptionId == opt.card.id;
 
                       Color borderColor = context.borderColor;
                       Color bgColor = context.cardBg;
@@ -234,43 +273,33 @@ class _QuizScreenState extends State<QuizScreen> {
                           borderColor = context.danger;
                           bgColor = context.danger.withValues(alpha: 0.06);
                         }
-                      }
-                      // Highlight when held
-                      final isHeld = _expandedOptionId == opt.card.id;
-                      if (!_answered && isHeld) {
-                        borderColor = Theme.of(context).colorScheme.primary.withValues(alpha: 0.5);
-                        bgColor = Theme.of(context).colorScheme.primary.withValues(alpha: 0.04);
+                      } else if (isExpanded) {
+                        borderColor = Theme.of(context)
+                            .colorScheme
+                            .primary
+                            .withValues(alpha: 0.4);
                       }
 
-                      // Show full answer for correct option after answering,
-                      // or when long-pressed before answering
-                      final showFull =
-                          (_answered && isCorrectOption) || (!_answered && isHeld);
+                      final fullText = opt.card.answer;
+                      final firstSentence = _getFirstSentence(fullText);
+                      final hasMore = firstSentence.length < fullText.length;
 
                       return Padding(
                         padding: const EdgeInsets.only(bottom: 8),
-                        child: GestureDetector(
-                          onTap: () => _answer(opt),
-                          onLongPress: _answered
-                              ? null
-                              : () {
-                                  HapticFeedback.lightImpact();
-                                  setState(() {
-                                    _expandedOptionId = opt.card.id;
-                                  });
-                                },
-                          onLongPressEnd: _answered
-                              ? null
-                              : (_) {
-                                  setState(() {
-                                    _expandedOptionId = null;
-                                  });
-                                },
-                          child: AnimatedContainer(
-                              duration: const Duration(milliseconds: 300),
+                        child: Material(
+                          color: bgColor,
+                          borderRadius: BorderRadius.circular(12),
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(12),
+                            onTap: _answered
+                                ? null
+                                : () => _toggleExpand(opt.card.id),
+                            onDoubleTap:
+                                _answered ? null : () => _answer(opt),
+                            child: AnimatedContainer(
+                              duration: const Duration(milliseconds: 250),
                               padding: const EdgeInsets.all(14),
                               decoration: BoxDecoration(
-                                color: bgColor,
                                 borderRadius: BorderRadius.circular(12),
                                 border: Border.all(
                                   color: borderColor,
@@ -283,7 +312,7 @@ class _QuizScreenState extends State<QuizScreen> {
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  // Letter/check badge
+                                  // Letter badge
                                   Container(
                                     width: 26,
                                     height: 26,
@@ -291,10 +320,7 @@ class _QuizScreenState extends State<QuizScreen> {
                                       color: _answered && isCorrectOption
                                           ? context.success
                                               .withValues(alpha: 0.12)
-                                          : _answered && isSelected
-                                              ? context.danger
-                                                  .withValues(alpha: 0.12)
-                                              : context.cardBg2,
+                                          : context.cardBg2,
                                       borderRadius: BorderRadius.circular(7),
                                     ),
                                     alignment: Alignment.center,
@@ -321,90 +347,80 @@ class _QuizScreenState extends State<QuizScreen> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        // Statute reference - prominent
-                                        Container(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 6, vertical: 2),
-                                          decoration: BoxDecoration(
-                                            color: opt.topic.color
-                                                .withValues(alpha: 0.08),
-                                            borderRadius:
-                                                BorderRadius.circular(4),
-                                          ),
-                                          child: Text(
-                                            opt.card.statute,
-                                            style: GoogleFonts.jetBrainsMono(
-                                              fontSize: 11,
-                                              fontWeight: FontWeight.w600,
-                                              color: opt.topic.color,
-                                            ),
+                                        Text(
+                                          opt.card.statute,
+                                          style: GoogleFonts.jetBrainsMono(
+                                            fontSize: 10,
+                                            color: isExpanded && !_answered
+                                                ? Theme.of(context)
+                                                    .colorScheme
+                                                    .primary
+                                                : context.dimText,
                                           ),
                                         ),
-                                        const SizedBox(height: 8),
-                                        // Answer text
+                                        const SizedBox(height: 4),
                                         AnimatedCrossFade(
+                                          duration:
+                                              const Duration(milliseconds: 200),
+                                          crossFadeState:
+                                              (isExpanded || _answered)
+                                                  ? CrossFadeState.showSecond
+                                                  : CrossFadeState.showFirst,
                                           firstChild: Text(
-                                            _firstSentence(opt.card.answer),
-                                            style: TextStyle(
+                                            firstSentence +
+                                                (hasMore ? '...' : ''),
+                                            style: const TextStyle(
                                               fontSize: 13,
                                               fontWeight: FontWeight.w500,
-                                              height: 1.5,
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .onSurface,
+                                              height: 1.4,
                                             ),
                                           ),
                                           secondChild: Text(
-                                            opt.card.answer,
-                                            style: TextStyle(
+                                            fullText,
+                                            style: const TextStyle(
                                               fontSize: 13,
-                                              fontWeight: showFull
-                                                  ? FontWeight.w500
-                                                  : FontWeight.w400,
-                                              height: 1.6,
-                                              color: showFull
-                                                  ? Theme.of(context)
-                                                      .colorScheme
-                                                      .onSurface
-                                                  : context.mutedText,
+                                              fontWeight: FontWeight.w500,
+                                              height: 1.4,
                                             ),
                                           ),
-                                          crossFadeState: showFull
-                                              ? CrossFadeState.showSecond
-                                              : CrossFadeState.showFirst,
-                                          duration:
-                                              const Duration(milliseconds: 300),
                                         ),
+                                        if (hasMore &&
+                                            !isExpanded &&
+                                            !_answered) ...[
+                                          const SizedBox(height: 4),
+                                          Text(
+                                            'Tap to read more',
+                                            style: TextStyle(
+                                              fontSize: 10,
+                                              color: context.dimText
+                                                  .withValues(alpha: 0.6),
+                                              fontStyle: FontStyle.italic,
+                                            ),
+                                          ),
+                                        ],
                                       ],
                                     ),
                                   ),
+                                  if (hasMore && !_answered)
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 4),
+                                      child: Icon(
+                                        isExpanded
+                                            ? Icons.keyboard_arrow_up_rounded
+                                            : Icons
+                                                .keyboard_arrow_down_rounded,
+                                        size: 18,
+                                        color: context.dimText
+                                            .withValues(alpha: 0.5),
+                                      ),
+                                    ),
                                 ],
                               ),
                             ),
                           ),
+                        ),
                       );
                     }),
-
-                    // ── Hold hint ──
-                    if (!_answered)
-                      Padding(
-                        padding: const EdgeInsets.only(top: 2, bottom: 8),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(Icons.touch_app_outlined,
-                                size: 13, color: context.dimText),
-                            const SizedBox(width: 4),
-                            Text(
-                              'Hold an option to preview the full answer',
-                              style: TextStyle(
-                                fontSize: 11,
-                                color: context.dimText,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
 
                     // ── Next button ──
                     if (_answered) ...[
