@@ -8,258 +8,6 @@ import '../services/statute_links.dart';
 import '../theme/app_theme.dart';
 import 'linked_text.dart';
 
-/// Simplified flashcard with:
-/// - Single tap to expand/collapse long text
-/// - Double tap to flip between question and answer
-class SimpleFlashcardWidget extends StatefulWidget {
-  final Flashcard card;
-  final Color topicColor;
-  final bool showAnswer;
-  final VoidCallback onTap;
-  final List<Acronym> acronyms;
-
-  const SimpleFlashcardWidget({
-    super.key,
-    required this.card,
-    required this.topicColor,
-    required this.showAnswer,
-    required this.onTap,
-    this.acronyms = const [],
-  });
-
-  @override
-  State<SimpleFlashcardWidget> createState() => _SimpleFlashcardWidgetState();
-}
-
-class _SimpleFlashcardWidgetState extends State<SimpleFlashcardWidget> {
-  bool _isExpanded = false;
-
-  @override
-  void didUpdateWidget(SimpleFlashcardWidget oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    // Reset expansion when card changes or flips
-    if (widget.card.id != oldWidget.card.id ||
-        widget.showAnswer != oldWidget.showAnswer) {
-      _isExpanded = false;
-    }
-  }
-
-  void _handleTap() {
-    setState(() => _isExpanded = !_isExpanded);
-  }
-
-  void _handleDoubleTap() {
-    widget.onTap();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: _handleTap,
-      onDoubleTap: _handleDoubleTap,
-      child: AnimatedSwitcher(
-        duration: const Duration(milliseconds: 300),
-        transitionBuilder: (child, animation) {
-          return FadeTransition(opacity: animation, child: child);
-        },
-        child: Container(
-          key: ValueKey('${widget.showAnswer}_${widget.card.id}'),
-          width: double.infinity,
-          constraints: const BoxConstraints(minHeight: 280),
-          padding: const EdgeInsets.all(24),
-          decoration: BoxDecoration(
-            color: context.cardBg,
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: context.borderColor),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.15),
-                blurRadius: 24,
-                offset: const Offset(0, 8),
-              ),
-            ],
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Header row
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: List.generate(3, (i) {
-                      return Container(
-                        width: 7,
-                        height: 7,
-                        margin: const EdgeInsets.only(right: 3),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: i < widget.card.difficulty
-                              ? widget.topicColor
-                              : context.cardBg2,
-                        ),
-                      );
-                    }),
-                  ),
-                  Text(
-                    widget.showAnswer ? 'ANSWER' : 'QUESTION',
-                    style: TextStyle(
-                      fontSize: 9,
-                      fontWeight: FontWeight.w600,
-                      color: context.dimText,
-                      letterSpacing: 1,
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 16),
-
-              // Content
-              if (!widget.showAnswer)
-                _buildTextContent(
-                  context,
-                  child: Text(
-                    widget.card.question,
-                    style: GoogleFonts.newsreader(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                      height: 1.5,
-                    ),
-                    maxLines: _isExpanded ? null : 6,
-                    overflow:
-                        _isExpanded ? TextOverflow.visible : TextOverflow.fade,
-                  ),
-                )
-              else
-                _buildTextContent(
-                  context,
-                  child: LinkedText(
-                    text: widget.card.answer,
-                    acronyms: widget.acronyms,
-                    style: TextStyle(
-                      fontSize: 14,
-                      height: 1.75,
-                      color: Theme.of(context).colorScheme.onSurface,
-                    ),
-                  ),
-                ),
-
-              // Expand indicator
-              if (!_isExpanded) ...[
-                const SizedBox(height: 8),
-                Center(
-                  child: Icon(
-                    Icons.keyboard_arrow_down_rounded,
-                    size: 20,
-                    color: context.dimText.withValues(alpha: 0.5),
-                  ),
-                ),
-              ],
-
-              const SizedBox(height: 12),
-
-              // Statute badge
-              _buildStatuteBadge(context),
-
-              const SizedBox(height: 14),
-
-              // Gesture hint
-              Center(
-                child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
-                  decoration: BoxDecoration(
-                    color: context.cardBg2,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Text(
-                    _isExpanded
-                        ? 'Tap to collapse  \u00b7  Double-tap to flip'
-                        : 'Tap to expand  \u00b7  Double-tap to flip',
-                    style: TextStyle(
-                      fontSize: 10,
-                      color: context.dimText,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildTextContent(BuildContext context, {required Widget child}) {
-    return AnimatedCrossFade(
-      duration: const Duration(milliseconds: 250),
-      crossFadeState:
-          _isExpanded ? CrossFadeState.showSecond : CrossFadeState.showFirst,
-      firstChild: ConstrainedBox(
-        constraints: const BoxConstraints(maxHeight: 160),
-        child: ShaderMask(
-          shaderCallback: (Rect bounds) {
-            return LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                Colors.white,
-                Colors.white,
-                Colors.white.withValues(alpha: 0.0),
-              ],
-              stops: const [0.0, 0.7, 1.0],
-            ).createShader(bounds);
-          },
-          blendMode: BlendMode.dstIn,
-          child: child,
-        ),
-      ),
-      secondChild: child,
-    );
-  }
-
-  Widget _buildStatuteBadge(BuildContext context) {
-    final url = StatuteLinks.getUrl(widget.card.statute);
-    return GestureDetector(
-      onTap: url != null
-          ? () {
-              launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
-            }
-          : null,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-        decoration: BoxDecoration(
-          color: widget.topicColor.withValues(alpha: 0.08),
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              widget.card.statute,
-              style: GoogleFonts.jetBrainsMono(
-                fontSize: 11,
-                fontWeight: FontWeight.w600,
-                color: widget.topicColor,
-              ),
-            ),
-            if (url != null) ...[
-              const SizedBox(width: 6),
-              Icon(
-                Icons.open_in_new_rounded,
-                size: 12,
-                color: widget.topicColor.withValues(alpha: 0.7),
-              ),
-            ],
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-/// Full 3D flip version (kept for reference but not actively used)
 class FlashcardWidget extends StatefulWidget {
   final Flashcard card;
   final Color topicColor;
@@ -321,7 +69,7 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onDoubleTap: widget.onTap,
+      onTap: widget.onTap,
       child: AnimatedBuilder(
         animation: _animation,
         builder: (context, child) {
@@ -348,19 +96,18 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
         color: context.cardBg,
         borderRadius: BorderRadius.circular(20),
         border: Border.all(color: context.borderColor),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.15),
+            blurRadius: 24,
+            offset: const Offset(0, 8),
+          ),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'QUESTION  \u00b7  DOUBLE-TAP TO FLIP',
-            style: TextStyle(
-              fontSize: 9,
-              fontWeight: FontWeight.w600,
-              color: context.dimText,
-              letterSpacing: 1,
-            ),
-          ),
+          _buildDifficultyAndLabel(context, 'QUESTION'),
           const SizedBox(height: 16),
           Text(
             widget.card.question,
@@ -370,6 +117,8 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
               height: 1.5,
             ),
           ),
+          const SizedBox(height: 16),
+          _buildStatuteBadge(context),
         ],
       ),
     );
@@ -387,19 +136,18 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
           color: context.cardBg,
           borderRadius: BorderRadius.circular(20),
           border: Border.all(color: context.borderColor),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.15),
+              blurRadius: 24,
+              offset: const Offset(0, 8),
+            ),
+          ],
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'ANSWER  \u00b7  DOUBLE-TAP TO FLIP',
-              style: TextStyle(
-                fontSize: 9,
-                fontWeight: FontWeight.w600,
-                color: context.dimText,
-                letterSpacing: 1,
-              ),
-            ),
+            _buildDifficultyAndLabel(context, 'ANSWER'),
             const SizedBox(height: 16),
             LinkedText(
               text: widget.card.answer,
@@ -410,7 +158,224 @@ class _FlashcardWidgetState extends State<FlashcardWidget>
                 color: Theme.of(context).colorScheme.onSurface,
               ),
             ),
+            const SizedBox(height: 16),
+            _buildStatuteBadge(context),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDifficultyAndLabel(BuildContext context, String label) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Row(
+          children: List.generate(3, (i) {
+            return Container(
+              width: 7,
+              height: 7,
+              margin: const EdgeInsets.only(right: 3),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: i < widget.card.difficulty
+                    ? widget.topicColor
+                    : context.cardBg2,
+              ),
+            );
+          }),
+        ),
+        Text(
+          '$label  \u00b7  TAP TO FLIP',
+          style: TextStyle(
+            fontSize: 9,
+            fontWeight: FontWeight.w600,
+            color: context.dimText,
+            letterSpacing: 1,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildStatuteBadge(BuildContext context) {
+    final url = StatuteLinks.getUrl(widget.card.statute);
+    return GestureDetector(
+      onTap: url != null
+          ? () {
+              launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+            }
+          : null,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        decoration: BoxDecoration(
+          color: widget.topicColor.withValues(alpha: 0.08),
+          borderRadius: BorderRadius.circular(8),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              widget.card.statute,
+              style: GoogleFonts.jetBrainsMono(
+                fontSize: 11,
+                fontWeight: FontWeight.w600,
+                color: widget.topicColor,
+              ),
+            ),
+            if (url != null) ...[
+              const SizedBox(width: 6),
+              Icon(
+                Icons.open_in_new_rounded,
+                size: 12,
+                color: widget.topicColor.withValues(alpha: 0.7),
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Simplified version using crossfade instead of 3D flip
+class SimpleFlashcardWidget extends StatelessWidget {
+  final Flashcard card;
+  final Color topicColor;
+  final bool showAnswer;
+  final VoidCallback onTap;
+  final List<Acronym> acronyms;
+
+  const SimpleFlashcardWidget({
+    super.key,
+    required this.card,
+    required this.topicColor,
+    required this.showAnswer,
+    required this.onTap,
+    this.acronyms = const [],
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 300),
+        transitionBuilder: (child, animation) {
+          return FadeTransition(opacity: animation, child: child);
+        },
+        child: Container(
+          key: ValueKey(showAnswer),
+          width: double.infinity,
+          constraints: const BoxConstraints(minHeight: 280),
+          padding: const EdgeInsets.all(24),
+          decoration: BoxDecoration(
+            color: context.cardBg,
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: context.borderColor),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.15),
+                blurRadius: 24,
+                offset: const Offset(0, 8),
+              ),
+            ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: List.generate(3, (i) {
+                      return Container(
+                        width: 7,
+                        height: 7,
+                        margin: const EdgeInsets.only(right: 3),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: i < card.difficulty
+                              ? topicColor
+                              : context.cardBg2,
+                        ),
+                      );
+                    }),
+                  ),
+                  Text(
+                    '${showAnswer ? "ANSWER" : "QUESTION"}  \u00b7  TAP TO FLIP',
+                    style: TextStyle(
+                      fontSize: 9,
+                      fontWeight: FontWeight.w600,
+                      color: context.dimText,
+                      letterSpacing: 1,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
+              if (!showAnswer)
+                Text(
+                  card.question,
+                  style: GoogleFonts.newsreader(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                    height: 1.5,
+                  ),
+                )
+              else
+                LinkedText(
+                  text: card.answer,
+                  acronyms: acronyms,
+                  style: TextStyle(
+                    fontSize: 14,
+                    height: 1.75,
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
+                ),
+              const SizedBox(height: 16),
+              Builder(builder: (context) {
+                final url = StatuteLinks.getUrl(card.statute);
+                return GestureDetector(
+                  onTap: url != null
+                      ? () {
+                          launchUrl(Uri.parse(url),
+                              mode: LaunchMode.externalApplication);
+                        }
+                      : null,
+                  child: Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: topicColor.withValues(alpha: 0.08),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          card.statute,
+                          style: GoogleFonts.jetBrainsMono(
+                            fontSize: 11,
+                            fontWeight: FontWeight.w600,
+                            color: topicColor,
+                          ),
+                        ),
+                        if (url != null) ...[
+                          const SizedBox(width: 6),
+                          Icon(
+                            Icons.open_in_new_rounded,
+                            size: 12,
+                            color: topicColor.withValues(alpha: 0.7),
+                          ),
+                        ],
+                      ],
+                    ),
+                  ),
+                );
+              }),
+            ],
+          ),
         ),
       ),
     );
