@@ -284,7 +284,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ],
                                   ),
                                 ),
-                                Icon(Icons.play_circle_outline_rounded, size: 20, color: Color(0xFFE07B39)),
+                                const Icon(Icons.play_circle_outline_rounded, size: 20, color: Color(0xFFE07B39)),
                               ],
                             ),
                           ),
