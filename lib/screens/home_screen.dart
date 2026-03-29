@@ -10,6 +10,7 @@ import 'study_screen.dart';
 import 'quiz_screen.dart';
 import 'pocket_reference_screen.dart';
 import 'acronyms_screen.dart';
+import 'custody_flowchart_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   final AppState appState;
@@ -85,6 +86,15 @@ class _HomeScreenState extends State<HomeScreen> {
       context,
       MaterialPageRoute(
         builder: (_) => AcronymsScreen(acronyms: _app.acronyms),
+      ),
+    );
+  }
+
+  void _navigateToFlowchart() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => const CustodyFlowchartScreen(),
       ),
     );
   }
@@ -236,6 +246,50 @@ class _HomeScreenState extends State<HomeScreen> {
                       const SizedBox(height: 8),
                       // Acronyms button (full width)
                       _buildAcronymsBanner(context),
+
+                      const SizedBox(height: 8),
+                      // Custody flowchart button
+                      Material(
+                        color: context.cardBg,
+                        borderRadius: BorderRadius.circular(16),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(16),
+                          onTap: _navigateToFlowchart,
+                          child: Container(
+                            width: double.infinity,
+                            padding: const EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(16),
+                              border: Border.all(color: const Color(0xFFE07B39).withValues(alpha: 0.3)),
+                            ),
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 40, height: 40,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFFE07B39).withValues(alpha: 0.1),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: const Text('🔒', style: TextStyle(fontSize: 20)),
+                                ),
+                                const SizedBox(width: 12),
+                                const Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text('Custody Flowchart', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
+                                      SizedBox(height: 2),
+                                      Text('Step-by-step booking-in guide', style: TextStyle(fontSize: 11, color: Color(0xFF8892A8))),
+                                    ],
+                                  ),
+                                ),
+                                Icon(Icons.play_circle_outline_rounded, size: 20, color: Color(0xFFE07B39)),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
 
                       // Topic List
                       const SizedBox(height: 24),

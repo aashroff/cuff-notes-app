@@ -1,0 +1,109 @@
+{
+  "id": "custody",
+  "title": "Custody Procedures",
+  "icon": "🔒",
+  "color": "#E07B39",
+  "version": 1,
+  "subcategories": ["En-Route", "Booking In", "Search", "Cell Procedure", "Key Rules"],
+  "cards": [
+    {
+      "id": "cu01",
+      "question": "What should you do en-route to custody with a prisoner?",
+      "answer": "Contact XH (control) to let the custody suite know you are on your way. For Humberside, this means informing Clough Road or Birchin Way. This allows the custody sergeant to prepare and ensures a cell is available. You should also be monitoring the prisoner throughout the journey.",
+      "statute": "PACE 1984, s.36",
+      "subcategory": "En-Route",
+      "difficulty": 1,
+      "tags": ["custody", "en-route", "notification"]
+    },
+    {
+      "id": "cu02",
+      "question": "What must be recorded when arriving at custody with a prisoner?",
+      "answer": "You must record the time of arrest and the time of arrival at the station. These are critical for the detention clock. The custody sergeant will also record these times on the custody record. The maximum period of detention without charge begins from the time of arrival at the first police station.",
+      "statute": "PACE 1984, s.41",
+      "subcategory": "Booking In",
+      "difficulty": 1,
+      "tags": ["time", "arrest", "arrival", "detention clock"]
+    },
+    {
+      "id": "cu03",
+      "question": "What must the arresting officer present to the custody sergeant?",
+      "answer": "The arresting officer must present the circumstances of the arrest, the offence(s) for which the person was arrested, and the necessity criteria relied upon for the arrest under PACE s.24(5) Code G. The custody sergeant must then decide whether there are sufficient grounds for detention. If the custody sergeant is not satisfied, they must release the person.",
+      "statute": "PACE 1984, s.37",
+      "subcategory": "Booking In",
+      "difficulty": 2,
+      "tags": ["custody sergeant", "necessity", "authorise detention"]
+    },
+    {
+      "id": "cu04",
+      "question": "Should handcuffs be kept on a prisoner in custody?",
+      "answer": "This is a decision for you based on a dynamic risk assessment. Consider the risk the prisoner poses to themselves, to you, and to others. Factors include their behaviour, the offence, any intelligence, intoxication level, and whether they are compliant. Handcuffs should be removed as soon as it is safe to do so. The custody sergeant may also direct their removal.",
+      "statute": "PACE 1984, Code C",
+      "subcategory": "Booking In",
+      "difficulty": 1,
+      "tags": ["handcuffs", "risk assessment", "decision"]
+    },
+    {
+      "id": "cu05",
+      "question": "What does a s54 PACE custody search involve?",
+      "answer": "Under s54 PACE, the custody officer may search any person who is in police detention at a police station. The search must be conducted by a constable of the same sex as the person searched. The procedure is: WAND first (metal detector), then physical SEARCH, then WAND again. Items that can be seized include anything the person might use to cause injury, damage property, interfere with evidence, or assist escape. Also remove belts, watches, jewellery, and other items. Place seized items out of reach on the custody desk.",
+      "statute": "PACE 1984, s.54",
+      "subcategory": "Search",
+      "difficulty": 2,
+      "tags": ["search", "s54", "same sex", "wand"]
+    },
+    {
+      "id": "cu06",
+      "question": "What is the WAND procedure in custody?",
+      "answer": "The wand is a handheld metal detector used during custody searches. The procedure is WAND - SEARCH - WAND (wand first, physical search, then wand again to confirm). The wand can be set to vibrate or beep. If it picks something up, you STOP, check the area, then RESUME. The technique is described as 'painting the prisoner green' because you systematically cover their entire body in sweeping motions, ensuring no area is missed.",
+      "statute": "PACE 1984, s.54",
+      "subcategory": "Search",
+      "difficulty": 1,
+      "tags": ["wand", "metal detector", "technique"]
+    },
+    {
+      "id": "cu07",
+      "question": "What should you check about a holding cell before use?",
+      "answer": "If using a holding cell before the main booking-in process, you must search the room first before placing the prisoner inside. Check for any items that could be used as weapons or for self-harm, check the condition of the cell, and ensure it is safe for the prisoner to occupy. Never place a prisoner in an unchecked cell.",
+      "statute": "PACE 1984, Code C",
+      "subcategory": "Cell Procedure",
+      "difficulty": 1,
+      "tags": ["holding cell", "safety check", "search room"]
+    },
+    {
+      "id": "cu08",
+      "question": "What items should be removed from a prisoner during a custody search?",
+      "answer": "Remove belts, watches, jewellery, shoelaces, and any other items that could be used for self-harm, to cause injury to others, to damage property, to interfere with evidence, or to assist escape. Unless you need the fire brigade to remove it! If an item cannot be easily removed (e.g. a ring that won't come off), note it on the custody record. Place all seized items out of reach on the custody desk, not in your pocket.",
+      "statute": "PACE 1984, s.54(4)",
+      "subcategory": "Search",
+      "difficulty": 1,
+      "tags": ["property", "belts", "jewellery", "self-harm"]
+    },
+    {
+      "id": "cu09",
+      "question": "What is the farrier technique used in custody?",
+      "answer": "The farrier technique is used when removing shoes from a prisoner. Stand to the side of the prisoner and block the foot nearest to you with your foot. Ask the prisoner to lift their other foot so you can remove the shoe. This prevents them from kicking out. Then switch sides and repeat for the other foot. The technique gets its name from the way farriers hold a horse's hoof. Always be ready to catch low down if the prisoner tries to resist.",
+      "statute": "Officer Safety Training",
+      "subcategory": "Search",
+      "difficulty": 2,
+      "tags": ["farrier", "shoes", "officer safety", "technique"]
+    },
+    {
+      "id": "cu10",
+      "question": "What checks must be done before placing a prisoner in a cell?",
+      "answer": "Before placing a prisoner in a cell: Check the cell is clean and safe (no damage, no hidden items). Check the cell buzzer/intercom is working. Provide a new, clean blanket. Place the prisoner's shoes in the cubby hole outside the cell. After the prisoner enters, shut the door securely and immediately check on the prisoner via the hatch/wicket to confirm they are settled.",
+      "statute": "PACE 1984, Code C, para 8",
+      "subcategory": "Cell Procedure",
+      "difficulty": 1,
+      "tags": ["cell", "checks", "buzzer", "blanket"]
+    },
+    {
+      "id": "cu11",
+      "question": "What is the golden rule of the custody process?",
+      "answer": "Someone is always watching the prisoner. The prisoner should never be left unattended at any point during the custody process, from arrival at the station through booking in, searching, and placement in the cell. After the prisoner is in the cell, regular checks must be made at intervals determined by the custody sergeant based on the risk assessment (typically every 30 minutes, or more frequently if the person is intoxicated or at risk).",
+      "statute": "PACE 1984, Code C, para 9",
+      "subcategory": "Key Rules",
+      "difficulty": 1,
+      "tags": ["observation", "monitoring", "safety", "golden rule"]
+    }
+  ]
+}
